@@ -221,19 +221,69 @@ function HowItWorks() {
   );
 }
 
+function TwoQRs() {
+  return (
+    <section style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
+        <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>Dos QRs, una solución</p>
+        <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 40px", maxWidth: 700 }}>
+          El legal te lo resolvemos gratis.{" "}
+          <span style={{ color: theme.gold }}>El premium transforma tu botella.</span>
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 24 }}>
+          <div style={{ borderRadius: 24, padding: "28px 24px", border: `1px solid ${theme.border}`, background: "rgba(255,255,255,0.03)" }}>
+            <div style={{ display: "inline-flex", padding: "4px 12px", borderRadius: 8, background: "rgba(74,222,128,0.1)", color: "#4ade80", fontSize: 11, fontWeight: 700, marginBottom: 16 }}>GRATIS</div>
+            <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 8px" }}>QR Legal (e-label EU)</h3>
+            <p style={{ color: theme.textSoft, lineHeight: 1.8, fontSize: 14, margin: "0 0 16px" }}>
+              Ingredientes, nutricional, alérgenos. Cumple la regulación EU 2021/2117. Pequeño, en la etiqueta trasera.
+            </p>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              {["Ilimitado — todos los vinos de la bodega", "24 idiomas EU automáticos", "Actualizable en cualquier momento", "Cumplimiento legal garantizado"].map(f => (
+                <li key={f} style={{ padding: "5px 0", fontSize: 13, color: theme.textSoft, display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ color: "#4ade80" }}>✓</span> {f}
+                </li>
+              ))}
+            </ul>
+            <p style={{ marginTop: 16, fontSize: 12, color: theme.textSoft, fontStyle: "italic" }}>
+              Si hoy pagas Winefo (250€/año) o PinotQR (149€/año), esto te lo ahorras.
+            </p>
+          </div>
+          <div style={{ borderRadius: 24, padding: "28px 24px", border: "1px solid rgba(122,30,58,0.4)", background: "linear-gradient(135deg, rgba(122,30,58,0.15), rgba(54,16,34,0.1))", boxShadow: "0 20px 60px rgba(122,30,58,0.1)" }}>
+            <div style={{ display: "inline-flex", padding: "4px 12px", borderRadius: 8, background: "rgba(122,30,58,0.2)", color: "#e8a0b4", fontSize: 11, fontWeight: 700, marginBottom: 16 }}>PREMIUM</div>
+            <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 8px" }}>QR Experiencia (SommelierLab)</h3>
+            <p style={{ color: theme.textSoft, lineHeight: 1.8, fontSize: 14, margin: "0 0 16px" }}>
+              Experiencia digital completa. Visible en contraetiqueta o pegatina premium con CTA "Descubre este vino".
+            </p>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              {["Narrativa editorial propia + audio", "Hasta 9 idiomas con traducción curada", "Sommelier IA conversacional", "Analítica completa + QRs contextuales", "CTA de compra por país/distribuidor", "Valoraciones y comentarios moderables", "Dashboard de gestión completo"].map(f => (
+                <li key={f} style={{ padding: "5px 0", fontSize: 13, color: theme.textSoft, display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ color: theme.gold }}>✓</span> {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Pricing() {
   const plans = [
-    { name: "Esencial", price: "600", vinos: "1-3 vinos", langs: "3 idiomas", features: ["Narrativa + audio", "Analítica básica", "CTA compra/enoturismo", "E-label EU incluido"], highlight: false },
-    { name: "Premium", price: "1.500", vinos: "4-10 vinos", langs: "9 idiomas", features: ["Todo lo anterior", "Sommelier IA", "Analítica avanzada", "Audio en todos los idiomas", "Onboarding editorial completo"], highlight: true },
-    { name: "Bodega completa", price: "3.000", vinos: "Ilimitado", langs: "9 idiomas", features: ["Todo lo anterior", "Skins personalizados", "Reports + soporte prioritario", "Juego de cata sensorial", "Inteligencia de mercado"], highlight: false },
+    { name: "Starter", price: "300", setup: "400", vinos: "Hasta 3 vinos", langs: "3 idiomas", sommelier: false, features: ["Narrativa + audio por vino", "Dashboard completo", "Analítica + valoraciones", "CTA compra por país", "QRs contextuales", "Colores/skin personalizables", "E-label legal ilimitado GRATIS"], highlight: false },
+    { name: "Pro", price: "600", setup: "800", vinos: "Hasta 8 vinos", langs: "9 idiomas", sommelier: true, features: ["Todo lo de Starter", "Sommelier IA conversacional", "Audio en todos los idiomas", "Juego de cata sensorial"], highlight: true },
+    { name: "Bodega", price: "900", setup: "1.200", vinos: "Vinos ilimitados", langs: "9 idiomas", sommelier: true, features: ["Todo lo de Pro", "Vinos ilimitados", "Prioridad en nuevas features", "Inteligencia de mercado"], highlight: false },
   ];
   return (
     <section id="planes" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>Planes</p>
-        <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 40px" }}>
-          Elige el plan que se adapta a tu bodega
+        <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 16px" }}>
+          Elige el plan para tu bodega
         </h2>
+        <p style={{ color: theme.textSoft, fontSize: 15, lineHeight: 1.8, margin: "0 0 40px", maxWidth: 600 }}>
+          Todos los planes incluyen dashboard completo, analítica, valoraciones y el QR legal EU gratis para todos tus vinos.
+        </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
           {plans.map((p) => (
             <div key={p.name} style={{
@@ -244,14 +294,15 @@ function Pricing() {
             }}>
               <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 4px" }}>{p.name}</h3>
               <p style={{ color: theme.textSoft, fontSize: 13, margin: "0 0 16px" }}>{p.vinos} &middot; {p.langs}</p>
-              <p style={{ fontSize: 32, fontWeight: 800, margin: "0 0 4px" }}>
-                <span style={{ color: theme.gold }}>desde {p.price}€</span>
+              <p style={{ fontSize: 28, fontWeight: 800, margin: "0 0 0px" }}>
+                <span style={{ color: theme.gold }}>{p.price}€</span>
                 <span style={{ fontSize: 14, color: theme.textSoft, fontWeight: 500 }}>/año</span>
               </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: "20px 0 24px" }}>
+              <p style={{ fontSize: 12, color: theme.textSoft, margin: "0 0 16px" }}>Setup: {p.setup}€ (una vez)</p>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px" }}>
                 {p.features.map((f) => (
-                  <li key={f} style={{ padding: "6px 0", fontSize: 14, color: theme.textSoft, display: "flex", alignItems: "center", gap: 8 }}>
-                    <span style={{ color: theme.gold }}>✓</span> {f}
+                  <li key={f} style={{ padding: "5px 0", fontSize: 13, color: theme.textSoft, display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ color: f.includes("GRATIS") ? "#4ade80" : theme.gold }}>✓</span> {f}
                   </li>
                 ))}
               </ul>
@@ -267,9 +318,40 @@ function Pricing() {
             </div>
           ))}
         </div>
-        <p style={{ marginTop: 20, fontSize: 12, color: theme.textSoft, textAlign: "center" }}>
-          Todos los planes incluyen el QR legal EU. Sin coste adicional.
-        </p>
+        {/* Comparativa con competencia */}
+        <div style={{ marginTop: 48, background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 24, padding: "28px 24px", overflow: "auto" }}>
+          <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 16px", textAlign: "center" }}>¿Cuánto pagas hoy por un QR que solo muestra ingredientes?</h3>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
+            <thead>
+              <tr style={{ borderBottom: `1px solid ${theme.border}` }}>
+                <th style={{ textAlign: "left", padding: "8px 12px", color: theme.textSoft, fontWeight: 600 }}></th>
+                <th style={{ textAlign: "center", padding: "8px 12px", color: theme.textSoft, fontWeight: 600 }}>Winefo</th>
+                <th style={{ textAlign: "center", padding: "8px 12px", color: theme.textSoft, fontWeight: 600 }}>PinotQR</th>
+                <th style={{ textAlign: "center", padding: "8px 12px", color: theme.gold, fontWeight: 700 }}>SommelierLab</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["E-label legal", "250€/año", "149€/año", "GRATIS"],
+                ["Narrativa propia", "✗", "✗", "✓"],
+                ["Audio profesional", "✗", "✗", "✓"],
+                ["Multiidioma curado", "✗", "Auto", "9 idiomas"],
+                ["Sommelier IA", "✗", "✗", "✓"],
+                ["Analítica", "Básica", "✗", "Completa"],
+                ["Valoraciones", "✗", "✗", "✓"],
+                ["CTA compra/país", "✗", "✗", "✓"],
+                ["Dashboard", "✗", "✗", "✓"],
+              ].map(([label, w, p, s]) => (
+                <tr key={label} style={{ borderBottom: `1px solid rgba(255,255,255,0.04)` }}>
+                  <td style={{ padding: "8px 12px", color: theme.textSoft }}>{label}</td>
+                  <td style={{ padding: "8px 12px", textAlign: "center", color: "rgba(255,255,255,0.35)" }}>{w}</td>
+                  <td style={{ padding: "8px 12px", textAlign: "center", color: "rgba(255,255,255,0.35)" }}>{p}</td>
+                  <td style={{ padding: "8px 12px", textAlign: "center", color: s === "GRATIS" ? "#4ade80" : s === "✓" ? theme.gold : theme.text, fontWeight: 600 }}>{s}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   );
@@ -331,6 +413,7 @@ export default function Home() {
       <Demo />
       <Control />
       <HowItWorks />
+      <TwoQRs />
       <Pricing />
       <Contact />
       <Footer />

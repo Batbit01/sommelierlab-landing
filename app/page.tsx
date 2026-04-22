@@ -132,20 +132,28 @@ function Demo() {
         <p style={{ color: theme.textSoft, fontSize: "clamp(0.95rem, 1.8vw, 1.08rem)", lineHeight: 1.8, maxWidth: 600, margin: "0 0 40px" }}>
           Narrativa propia, audio, sommelier IA, maridaje con fotos, perfil sensorial, valoraciones. En 9 idiomas. Desde la botella.
         </p>
-        <div style={{ display: "flex", gap: 40, flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
-          <div style={{ width: 280, height: 500, borderRadius: 32, border: `2px solid ${theme.border}`, background: "rgba(255,255,255,0.02)", overflow: "hidden", boxShadow: "0 40px 80px rgba(0,0,0,0.4)" }}>
-            <iframe src={QR_DEMO_URL} style={{ width: "100%", height: "100%", border: "none" }} title="Demo QR2" />
+        <div style={{ display: "flex", gap: 48, flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
+          {/* Mockup móvil con dimensiones reales del QR2 (375×750, relación iPhone) */}
+          <div style={{ position: "relative", padding: 10, borderRadius: 44, background: "linear-gradient(135deg, #1a1a20, #0a0a0e)", border: `1px solid ${theme.border}`, boxShadow: "0 40px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06)" }}>
+            <div style={{ position: "absolute", top: 18, left: "50%", transform: "translateX(-50%)", width: 90, height: 22, borderRadius: 14, background: "#000", zIndex: 2 }} />
+            <div style={{ width: 360, height: 720, borderRadius: 34, overflow: "hidden", background: "#000", position: "relative" }}>
+              <iframe src={QR_DEMO_URL} style={{ width: "100%", height: "100%", border: "none", display: "block" }} title="Demo QR2" />
+            </div>
           </div>
           <div style={{ maxWidth: 400 }}>
             <h3 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 16px" }}>Escanea con tu móvil</h3>
             <p style={{ color: theme.textSoft, lineHeight: 1.8, margin: "0 0 20px" }}>
               O haz clic en "Ver demo" para experimentar la ficha completa de Inurrieta Puro Vicio 2021: narrativa con audio, sommelier conversacional, maridaje, perfil sensorial, valoraciones y bodega.
             </p>
-            <div style={{ padding: 16, borderRadius: 16, background: "rgba(255,255,255,0.04)", border: `1px solid ${theme.border}`, display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-              <div style={{ width: 120, height: 120, background: "rgba(255,255,255,0.1)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, color: theme.textSoft }}>
-                QR CODE
-              </div>
-              <span style={{ fontSize: 11, color: theme.textSoft }}>Escanea para ver la demo</span>
+            <div style={{ padding: 18, borderRadius: 16, background: "#fff", display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+              <img
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=0&ecc=M&data=${encodeURIComponent(QR_DEMO_URL)}`}
+                alt="QR de la demo SommelierLab"
+                width={180}
+                height={180}
+                style={{ display: "block", borderRadius: 6 }}
+              />
+              <span style={{ fontSize: 11, color: "#1a1a20", fontWeight: 600 }}>Escanea para ver la demo</span>
             </div>
           </div>
         </div>

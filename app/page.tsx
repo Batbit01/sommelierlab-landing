@@ -1,4 +1,7 @@
+// URL directa para el iframe (sin pasar por resolver, evita problemas de 302 en iframe)
 const QR_DEMO_URL = "https://qr2.sommelierlab.com/?vino_id=V005&anyada=2021&lang=es";
+// URL corta vía resolver con token — lo que codifica el QR físico. Emula flujo real de botella.
+const QR_SHORT_URL = "https://qr.sommelierlab.com/DEMO";
 
 const theme = {
   bg: "#07070B",
@@ -147,7 +150,7 @@ function Demo() {
             </p>
             <div style={{ padding: 18, borderRadius: 16, background: "#fff", display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
               <img
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=0&ecc=M&data=${encodeURIComponent(QR_DEMO_URL)}`}
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=0&ecc=M&data=${encodeURIComponent(QR_SHORT_URL)}`}
                 alt="QR de la demo SommelierLab"
                 width={180}
                 height={180}

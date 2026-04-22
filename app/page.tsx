@@ -1,4 +1,4 @@
-const QR_DEMO_URL = "https://qr.sommelierlab.com/?vino_id=V005&anyada=2021&lang=es";
+const QR_DEMO_URL = "https://qr2.sommelierlab.com/?vino_id=V005&anyada=2021&lang=es";
 
 const theme = {
   bg: "#07070B",

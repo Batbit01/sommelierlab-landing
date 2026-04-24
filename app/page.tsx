@@ -477,8 +477,12 @@ function Footer() {
           <p style={{ fontSize: 11, color: theme.textSoft, margin: "4px 0 0" }}>Identidad digital del vino</p>
         </div>
         <div style={{ display: "flex", gap: 20 }}>
-          {["Privacidad", "Cookies", "Términos"].map((item) => (
-            <a key={item} href="#" style={{ fontSize: 11, color: theme.textSoft, textDecoration: "none" }}>{item}</a>
+          {[
+            { label: "Privacidad", href: "/privacidad" },
+            { label: "Cookies", href: "/cookies" },
+            { label: "Términos", href: "/terminos" },
+          ].map((item) => (
+            <a key={item.href} href={item.href} style={{ fontSize: 11, color: theme.textSoft, textDecoration: "none" }}>{item.label}</a>
           ))}
         </div>
       </div>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function PrivacidadPage() {
   return (
-    <LegalLayout title="Política de Privacidad" updated="24 de abril de 2026">
+    <LegalLayout title="Política de Privacidad" updated="25 de abril de 2026">
       <ResponsibleBlock />
 
       <Section title="1. Quién trata tus datos">
@@ -49,10 +49,11 @@ export default function PrivacidadPage() {
         <P>Datos que podemos tratar según tu uso:</P>
         <UL>
           <LI>
-            <strong>Identificador local anónimo</strong> (user_hash): UUID
-            generado automáticamente en tu navegador y almacenado en tu
-            localStorage. Sirve para construir tu &quot;cava personal&quot; y
-            las notas privadas. No contiene información personal por sí mismo.
+            <strong>Identificador local anónimo</strong>: un identificador
+            único generado automáticamente en tu navegador y almacenado
+            localmente. Sirve para construir tu &quot;cava personal&quot; y
+            las notas privadas. No contiene información personal por sí
+            mismo y no se comparte con terceros.
           </LI>
           <LI>
             <strong>Email</strong>: solo si voluntariamente decides vincular tu
@@ -130,8 +131,8 @@ export default function PrivacidadPage() {
       <Section title="5. Durante cuánto tiempo conservamos tus datos">
         <UL>
           <LI>
-            <strong>Identificador local (user_hash)</strong>: vive en tu
-            navegador mientras no borres cookies o localStorage. Lo controlas
+            <strong>Identificador local anónimo</strong>: vive en tu navegador
+            mientras no borres cookies o almacenamiento local. Lo controlas
             tú.
           </LI>
           <LI>
@@ -159,25 +160,30 @@ export default function PrivacidadPage() {
 
       <Section title="6. Con quién compartimos tus datos (encargados del tratamiento)">
         <P>
-          Para prestar el servicio trabajamos con proveedores tecnológicos que
-          actúan como encargados del tratamiento, sujetos a acuerdos de
-          tratamiento de datos conformes al art. 28 RGPD:
+          Para prestar el servicio trabajamos con proveedores tecnológicos
+          especializados que actúan como encargados del tratamiento, sujetos
+          a acuerdos conformes al art. 28 RGPD. Declaramos aquí las{" "}
+          <strong>categorías de destinatarios</strong> según permite el art.
+          14.1.e RGPD; si necesitas la lista nominal y actualizada de
+          proveedores concretos puedes solicitarla ejerciendo tu derecho de
+          acceso (art. 15 RGPD) a través del email de contacto.
         </P>
         <ProviderTable
           rows={[
-            { name: "Vercel Inc.", purpose: "Hosting y funciones serverless", country: "EE.UU. / UE" },
-            { name: "Railway Corporation", purpose: "Base de datos PostgreSQL y runtime conversacional", country: "EE.UU." },
-            { name: "Backblaze Inc.", purpose: "Almacenamiento de media y backups", country: "EE.UU." },
-            { name: "OpenAI LLC", purpose: "IA generativa para narrativa y sommelier", country: "EE.UU." },
-            { name: "ElevenLabs Inc.", purpose: "Síntesis de voz del sommelier", country: "EE.UU." },
-            { name: "Resend Inc.", purpose: "Envío de emails transaccionales", country: "EE.UU. / UE" },
-            { name: "Cloudflare Inc.", purpose: "CDN, DNS y recepción de emails", country: "EE.UU. / UE" },
-            { name: "Google LLC", purpose: "Google Wallet (pases digitales)", country: "EE.UU." },
+            { category: "Hosting y plataforma serverless", purpose: "Servir el sitio web y ejecutar la lógica del servicio", country: "EE.UU. / EEE" },
+            { category: "Base de datos y runtime", purpose: "Almacenar la información operativa y ejecutar procesos en segundo plano", country: "EE.UU. / EEE" },
+            { category: "Almacenamiento de media y copias de seguridad", purpose: "Servir imágenes, audios y guardar backups cifrados", country: "EE.UU." },
+            { category: "Inteligencia artificial generativa", purpose: "Elaborar narrativas y mantener la conversación del sommelier IA", country: "EE.UU." },
+            { category: "Síntesis de voz", purpose: "Generar el audio narrado del sommelier", country: "EE.UU." },
+            { category: "Envío de email transaccional", purpose: "Enviar verificaciones de email y notificaciones", country: "EE.UU. / EEE" },
+            { category: "CDN, DNS y protección perimetral", purpose: "Acelerar la entrega del contenido y proteger el servicio", country: "Red global con presencia en EEE y EE.UU." },
+            { category: "Pases digitales (Wallet)", purpose: "Emitir pases para almacenar botellas en el wallet del móvil", country: "EE.UU." },
           ]}
         />
         <P>
           No vendemos ni cedemos tus datos a terceros para fines
-          publicitarios.
+          publicitarios. No compartimos tus datos con redes sociales ni
+          anunciantes.
         </P>
       </Section>
 

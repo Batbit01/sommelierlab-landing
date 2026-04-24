@@ -185,22 +185,36 @@ export function LI({ children }: { children: ReactNode }) {
   return <li style={{ marginBottom: 8 }}>{children}</li>;
 }
 
-/** Tabla simple para listas de proveedores. */
-export function ProviderTable({ rows }: { rows: { name: string; purpose: string; country: string }[] }) {
+/**
+ * Tabla de categorías de encargados del tratamiento.
+ *
+ * Amparo legal: art. 14.1.e RGPD permite declarar "categorías de
+ * destinatarios" en lugar de enumerar cada proveedor. La lista detallada
+ * se facilita a solicitud del interesado cuando ejerce el derecho de
+ * acceso (art. 15 RGPD).
+ *
+ * Razón comercial: agrupar por función evita servir el stack técnico
+ * completo a competidores que quisieran replicar la arquitectura.
+ */
+export function ProviderTable({
+  rows,
+}: {
+  rows: { category: string; purpose: string; country: string }[];
+}) {
   return (
     <div style={{ overflowX: "auto", marginBottom: 14 }}>
       <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
         <thead>
           <tr style={{ textAlign: "left", color: "#F6F1EB" }}>
-            <th style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Proveedor</th>
+            <th style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Categoría de encargado</th>
             <th style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Finalidad</th>
-            <th style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>País</th>
+            <th style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Ubicación</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((r, i) => (
             <tr key={i}>
-              <td style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>{r.name}</td>
+              <td style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>{r.category}</td>
               <td style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>{r.purpose}</td>
               <td style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>{r.country}</td>
             </tr>

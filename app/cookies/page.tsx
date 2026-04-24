@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function CookiesPage() {
   return (
-    <LegalLayout title="Política de Cookies" updated="24 de abril de 2026">
+    <LegalLayout title="Política de Cookies" updated="25 de abril de 2026">
       <ResponsibleBlock />
 
       <Section title="1. Qué es una cookie y por qué te lo contamos">
@@ -35,9 +35,11 @@ export default function CookiesPage() {
         </P>
       </Section>
 
-      <Section title="2. Qué cookies / almacenamiento usa SommelierLab">
+      <Section title="2. Qué almacenamiento usa SommelierLab">
         <P>
-          Clasificación según el tipo y la finalidad:
+          Declaramos aquí las categorías de información almacenada
+          localmente en tu dispositivo. No usamos cookies publicitarias ni
+          de seguimiento de terceros.
         </P>
 
         <h3 style={{ color: "#F6F1EB", fontSize: 16, margin: "24px 0 10px" }}>
@@ -45,39 +47,39 @@ export default function CookiesPage() {
         </h3>
         <P>
           Exentas del deber de consentimiento conforme al art. 22.2 de la
-          LSSI y la Guía de la AEPD sobre cookies.
+          LSSI y la Guía de la AEPD sobre cookies. Solo se almacenan en tu
+          navegador, en ningún caso se envían a terceros con fines
+          publicitarios.
         </P>
         <UL>
           <LI>
-            <strong>sl_user</strong> (localStorage del QR2): UUID anónimo que
-            construye tu cava personal. Sin él no se pueden mostrar las
-            botellas que has escaneado. Permanece hasta que tú borres los
-            datos del sitio.
+            <strong>Identificador anónimo de dispositivo</strong>:
+            identificador único generado localmente que construye tu cava
+            personal y vincula tus notas privadas. Sin él no se pueden
+            mostrar las botellas que has escaneado. Permanece hasta que
+            borres los datos del sitio.
           </LI>
           <LI>
-            <strong>sl_lang</strong> (localStorage): idioma que has elegido
-            la última vez (9 disponibles). Permanece hasta que cambies de
-            idioma o limpies el sitio.
+            <strong>Preferencia de idioma</strong>: guarda el idioma que
+            has elegido la última vez, entre los 9 disponibles.
           </LI>
           <LI>
-            <strong>sl_email</strong> (localStorage): caché del email
-            vinculado a tu cava, si lo has vinculado voluntariamente. Se
-            borra al desvincularlo.
+            <strong>Vinculación de email (si la activas)</strong>:
+            mantiene en caché la dirección vinculada a tu cava cuando has
+            optado voluntariamente por esta función, para mostrarla sin
+            pedirla de nuevo. Se borra al desvincularla.
           </LI>
           <LI>
-            <strong>sl_email_verified_at</strong> (localStorage): marca
-            temporal de cuándo verificaste tu email por primera vez.
+            <strong>Estado de flujos en curso</strong>: marcas temporales
+            que permiten completar procesos en curso (como añadir una
+            botella a tu wallet o verificar tu email). Se eliminan una vez
+            completado el proceso.
           </LI>
           <LI>
-            <strong>sl_wallet_pending</strong> (localStorage): flag temporal
-            usado durante el flujo de añadir una botella a Google Wallet.
-          </LI>
-          <LI>
-            <strong>Cookies de sesión NextAuth</strong> (solo panel de
-            bodegas <em>sommelierlab-dashboard.vercel.app</em>):
-            autenticación de la cuenta de la bodega. Nombre técnico:{" "}
-            <code>__Secure-authjs.session-token</code>. Expira a los 30 días
-            o al cerrar sesión.
+            <strong>Cookies de sesión</strong>: se utilizan en la zona
+            privada del panel de gestión de bodegas para mantener la
+            sesión iniciada. Expiran al cerrar sesión o tras un periodo
+            razonable de inactividad.
           </LI>
         </UL>
 
@@ -85,48 +87,33 @@ export default function CookiesPage() {
           B. Analítica propia agregada
         </h3>
         <P>
-          No instalamos cookies de analítica de terceros. Nuestra analítica
-          interna se basa en eventos enviados desde el navegador a nuestro
-          servidor (no en cookies), usando el identificador{" "}
-          <em>sl_user</em> descrito arriba y datos técnicos (país, idioma,
+          No instalamos cookies de analítica de terceros (no hay Google
+          Analytics, Facebook Pixel, TikTok Pixel, ni similares). Nuestra
+          analítica interna se basa en eventos enviados desde el navegador
+          a nuestro servidor, usando el identificador anónimo descrito
+          arriba junto con datos técnicos (país, idioma, tipo de
           dispositivo). La base legal es el interés legítimo en mejorar el
           producto y ofrecer métricas agregadas a las bodegas.
         </P>
 
         <h3 style={{ color: "#F6F1EB", fontSize: 16, margin: "24px 0 10px" }}>
-          C. Cookies de terceros
+          C. Cookies de terceros (solo al activar funciones opcionales)
         </h3>
         <P>
-          Solo cuando interactúas con ciertas funciones:
+          Solo cuando interactúas con ciertas funciones opcionales:
         </P>
         <UL>
           <LI>
-            <strong>YouTube / Vimeo</strong>: si una ficha incluye un vídeo
-            embebido, estos servicios pueden instalar sus cookies al
-            reproducirlo. Rigen sus propias políticas de privacidad (
-            <a
-              href="https://policies.google.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#D3B17A" }}
-            >
-              Google
-            </a>
-            ,{" "}
-            <a
-              href="https://vimeo.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#D3B17A" }}
-            >
-              Vimeo
-            </a>
-            ).
+            <strong>Reproductores de vídeo embebidos</strong>: si una ficha
+            incluye un vídeo y lo reproduces, el proveedor del reproductor
+            puede instalar sus propias cookies. Rigen sus políticas.
           </LI>
           <LI>
-            <strong>Google Wallet</strong>: si decides añadir una botella a
-            tu Wallet, Google recibe los datos del pase (nombre del vino,
-            añada, bodega) conforme a su política.
+            <strong>Pases digitales para wallet del móvil</strong>: si
+            decides añadir una botella a tu wallet, el proveedor del
+            servicio de wallet recibe los datos necesarios del pase
+            (nombre del vino, añada, bodega) conforme a su política de
+            privacidad.
           </LI>
         </UL>
       </Section>
@@ -186,7 +173,7 @@ export default function CookiesPage() {
           almacenados en nuestro servidor vinculados a ti.
         </P>
         <P>
-          <strong>Consecuencia</strong> de desactivar <em>sl_user</em>:
+          <strong>Consecuencia</strong> de borrar el almacenamiento local:
           perderás la cava personal y las notas privadas, porque no podremos
           reconocer tu dispositivo en siguientes escaneos. Las fichas de
           vino siguen siendo accesibles.

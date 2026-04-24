@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function TerminosPage() {
   return (
-    <LegalLayout title="Términos y Condiciones de Uso" updated="24 de abril de 2026">
+    <LegalLayout title="Términos y Condiciones de Uso" updated="25 de abril de 2026">
       <ResponsibleBlock />
 
       <Section title="1. Objeto">
@@ -94,12 +94,13 @@ export default function TerminosPage() {
 
       <Section title="4. Propiedad intelectual e industrial">
         <P>
-          Todo el contenido del sitio y del servicio (código, diseño,
+          Todo el contenido del sitio y del servicio (código fuente, diseño,
           interfaz, textos editoriales, narrativas, audios, traducciones,
           fotografías, iconografía, bases de datos, estructura de los datos,
-          marca &quot;SommelierLab&quot; y signos distintivos) es de
-          titularidad exclusiva del responsable indicado en la cabecera o de
-          sus licenciantes.
+          prompts de inteligencia artificial, flujos de trabajo, arquitectura
+          del sistema, marca &quot;SommelierLab&quot; y signos distintivos)
+          es de titularidad exclusiva del responsable indicado en la
+          cabecera o de sus licenciantes.
         </P>
         <P>
           Queda <strong>expresamente prohibido</strong>, salvo autorización
@@ -112,17 +113,23 @@ export default function TerminosPage() {
             contenidos.
           </LI>
           <LI>
-            Realizar ingeniería inversa, descompilar o desensamblar el
-            software.
+            Realizar ingeniería inversa, descompilar, desensamblar, observar,
+            estudiar o probar el funcionamiento del software con finalidad
+            de replicarlo, salvo las excepciones legales imperativas.
           </LI>
           <LI>
-            Usar marca, logo o elementos gráficos de SommelierLab en productos
-            o servicios de terceros.
+            Usar marca, logo, lemas o elementos gráficos de SommelierLab en
+            productos o servicios de terceros.
           </LI>
           <LI>
             Extraer, copiar o reutilizar de forma masiva o sistemática las
-            bases de datos del servicio (art. 133 Ley de Propiedad
-            Intelectual).
+            bases de datos del servicio (art. 133 del Texto Refundido de la
+            Ley de Propiedad Intelectual).
+          </LI>
+          <LI>
+            Utilizar el contenido del servicio para entrenar, afinar o
+            evaluar modelos de inteligencia artificial de terceros sin
+            autorización expresa y por escrito del titular.
           </LI>
         </UL>
         <P>
@@ -133,7 +140,48 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="5. Disponibilidad del servicio">
+      <Section title="5. Secreto empresarial y prohibición de análisis competitivo">
+        <P>
+          La arquitectura técnica del servicio, la metodología editorial, los
+          prompts y configuraciones de inteligencia artificial, los criterios
+          organolépticos, los flujos de publicación, los datos de uso
+          agregados y el conjunto de know-how del servicio constituyen{" "}
+          <strong>secretos empresariales</strong> del titular, protegidos por
+          la Ley 1/2019, de 20 de febrero, de Secretos Empresariales.
+        </P>
+        <P>
+          Queda expresamente prohibido:
+        </P>
+        <UL>
+          <LI>
+            Acceder al servicio con el propósito de obtener información para
+            desarrollar, lanzar o mejorar un producto o servicio competidor.
+          </LI>
+          <LI>
+            Realizar pruebas comparativas (<em>benchmarking</em>) cuyos
+            resultados se usen para replicar o sustituir funcionalidades del
+            servicio.
+          </LI>
+          <LI>
+            Solicitar acceso al servicio ocultando que se actúa por cuenta de
+            un competidor directo o indirecto.
+          </LI>
+          <LI>
+            Divulgar información no pública obtenida durante el uso del
+            servicio (arquitectura, configuraciones, datos de clientes,
+            métricas privadas) a terceros no autorizados.
+          </LI>
+        </UL>
+        <P>
+          La infracción de las obligaciones de este apartado faculta al
+          titular a ejercer las acciones civiles y penales previstas en la
+          Ley 1/2019 y en la Ley 3/1991 de Competencia Desleal (arts. 11 a
+          14), sin perjuicio de otras acciones legales que pudieran
+          corresponder.
+        </P>
+      </Section>
+
+      <Section title="6. Disponibilidad del servicio">
         <P>
           Hacemos lo razonable para mantener el servicio disponible 24/7,
           pero no garantizamos una disponibilidad ininterrumpida. Pueden
@@ -148,7 +196,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="6. Contenido de terceros y enlaces externos">
+      <Section title="7. Contenido de terceros y enlaces externos">
         <P>
           El sitio puede incluir enlaces a webs de terceros (redes sociales,
           distribuidores de vino, webs de bodegas, plataformas de vídeo,
@@ -163,7 +211,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="7. Limitación de responsabilidad">
+      <Section title="8. Limitación de responsabilidad">
         <P>
           El servicio se presta <strong>&quot;tal cual&quot;</strong> y{" "}
           <strong>&quot;según disponibilidad&quot;</strong>, sin garantías
@@ -199,7 +247,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="8. Indemnidad">
+      <Section title="9. Indemnidad">
         <P>
           Te comprometes a mantener indemne a SommelierLab, su titular y
           colaboradores frente a cualquier reclamación de terceros derivada
@@ -208,7 +256,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="9. Modificaciones">
+      <Section title="10. Modificaciones">
         <P>
           Podemos actualizar estos Términos para reflejar cambios del
           servicio o nuevos requisitos legales. La versión vigente es la
@@ -219,7 +267,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="10. Nulidad parcial">
+      <Section title="11. Nulidad parcial">
         <P>
           Si alguna cláusula de estos Términos fuera declarada nula o
           inaplicable, el resto conservará su plena vigencia. La cláusula
@@ -228,7 +276,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="11. Legislación aplicable y jurisdicción">
+      <Section title="12. Legislación aplicable y jurisdicción">
         <P>
           Estos Términos se rigen por la legislación española. Para la
           resolución de cualquier controversia, las partes se someten
@@ -238,7 +286,7 @@ export default function TerminosPage() {
         </P>
       </Section>
 
-      <Section title="12. Contacto">
+      <Section title="13. Contacto">
         <P>
           Para cualquier consulta sobre estos Términos:{" "}
           <a href="mailto:legal@sommelierlab.com" style={{ color: "#D3B17A" }}>

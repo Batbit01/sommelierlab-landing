@@ -102,6 +102,7 @@ function Solution() {
     { num: "04", title: "Tus datos vuelven a ti", text: "Quién escanea, desde dónde, en qué idioma, cuánto tiempo. Datos que hoy no existen. Inteligencia que se acumula cada mes." },
     { num: "05", title: "Vendes desde la botella", text: "Compra directa, reserva de enoturismo, contacto. Cada escaneo es una oportunidad de conversión. La botella deja de ser muda." },
     { num: "06", title: "Premium de verdad", text: "La calidad de tu experiencia digital dice tanto como la calidad de tu vino. Diseño premium que diferencia." },
+    { num: "07", title: "La botella no muere al vaciarse", text: "Cada QR escaneado deja huella en el móvil del consumidor: cava personal, notas de cata, pase en Wallet. Meses después, cuando escanee otra botella tuya, el sistema le saluda. Retención real." },
   ];
   return (
     <section id="solución" style={{ padding: "80px 0" }}>
@@ -119,6 +120,77 @@ function Solution() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function Retention() {
+  const layers = [
+    {
+      tag: "Cava local",
+      title: "La botella se acaba, tu bodega no",
+      text: "Cada vino escaneado queda guardado en la cava personal del consumidor. Sin registro, sin fricción. Una lista visual de botellas que ha descubierto. Una colección íntima que crece con cada cata.",
+      pitch: "\"La botella se acaba, pero tu bodega vive en el móvil del consumidor\"",
+    },
+    {
+      tag: "Email opt-in",
+      title: "Portabilidad y newsletter",
+      text: "El consumidor vincula su email con doble verificación. Su cava viaja entre móviles. Tú ganas un canal directo: cuando sacas una nueva añada, llega un email a quien ya bebió la anterior.",
+      pitch: "De anónimo a lead cualificado. Sin apps, sin contraseñas.",
+    },
+    {
+      tag: "Notas privadas",
+      title: "Tu libreta de cata",
+      text: "Valoración, ocasión, maridaje, impresiones. Notas privadas por botella, solo para el consumidor. Vuelve meses después y recuerda qué pensó de tu vino la noche de su aniversario.",
+      pitch: "\"Tu libreta de cata — un diario personal por cada vino tuyo\"",
+    },
+    {
+      tag: "Google Wallet",
+      title: "Un pase nativo en el móvil",
+      text: "Un toque y tu vino queda en Google Wallet del consumidor. Con foto, añada y QR de vuelta. Sobrevive a borrar cookies, cambiar navegador, cambiar de móvil. Años de permanencia nativa.",
+      pitch: "\"Un pase nativo en el Wallet. Años de permanencia.\"",
+    },
+    {
+      tag: "Bienvenido de vuelta",
+      title: "El móvil recuerda lo que él olvidó",
+      text: "Cuando re-escanea una botella tuya, el sistema le saluda: \"Bienvenido de vuelta · tu 3ª cata · hace 2 meses\". Cierra el ciclo. Refuerza la relación con tu marca sin que tú muevas un dedo.",
+      pitch: "\"El móvil del consumidor recuerda la botella que él ya ha olvidado\"",
+    },
+    {
+      tag: "Taste graph",
+      title: "El sommelier te reconoce",
+      text: "El sommelier IA acumula memoria del catador entre sesiones. Recuerda qué le gustó, qué le aburrió, qué descubrió. La próxima vez que abra otro vino tuyo, la conversación arranca desde su historial.",
+      pitch: "\"Tu sommelier te reconoce en cada botella\"",
+    },
+  ];
+  return (
+    <section style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}`, background: "linear-gradient(180deg, rgba(122,30,58,0.04), transparent 70%)" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
+        <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>La retención</p>
+        <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 16px", maxWidth: 800 }}>
+          Tu bodega vive en el móvil del consumidor.{" "}
+          <span style={{ color: theme.gold }}>Años después del último sorbo.</span>
+        </h2>
+        <p style={{ color: theme.textSoft, fontSize: "clamp(0.95rem, 1.8vw, 1.08rem)", lineHeight: 1.8, maxWidth: 680, margin: "0 0 48px" }}>
+          Seis capas de permanencia que se apilan. La botella se acaba. Tu marca no.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+          {layers.map((l) => (
+            <div key={l.tag} style={{ position: "relative", background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 24, padding: "28px 24px 24px", backdropFilter: "blur(12px)" }}>
+              <span style={{ display: "inline-flex", padding: "4px 10px", borderRadius: 8, background: "rgba(211,177,122,0.12)", color: theme.gold, fontSize: 10, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{l.tag}</span>
+              <h3 style={{ margin: "0 0 10px", fontSize: 18, fontWeight: 700, letterSpacing: "-0.01em", lineHeight: 1.25 }}>{l.title}</h3>
+              <p style={{ margin: "0 0 14px", lineHeight: 1.75, color: theme.textSoft, fontSize: 14 }}>{l.text}</p>
+              <p style={{ margin: 0, padding: "10px 12px", borderLeft: `2px solid ${theme.gold}`, fontSize: 12, color: theme.gold, fontStyle: "italic", lineHeight: 1.5, background: "rgba(211,177,122,0.04)", borderRadius: "0 8px 8px 0" }}>{l.pitch}</p>
+            </div>
+          ))}
+        </div>
+        <p style={{ marginTop: 48, padding: "24px 28px", borderRadius: 20, background: "rgba(122,30,58,0.08)", border: `1px solid rgba(122,30,58,0.25)`, fontSize: "clamp(1rem, 2.2vw, 1.25rem)", lineHeight: 1.7, color: theme.text, textAlign: "center", fontStyle: "italic", maxWidth: 860, marginLeft: "auto", marginRight: "auto" }}>
+          Tres formas de recordar tu vino: <strong style={{ color: theme.gold, fontStyle: "normal" }}>anónima local</strong>, <strong style={{ color: theme.gold, fontStyle: "normal" }}>con su email</strong>, o <strong style={{ color: theme.gold, fontStyle: "normal" }}>nativa en su móvil</strong>. Elige la que más te guste. O las tres.
+        </p>
+        <p style={{ marginTop: 28, color: theme.textSoft, fontSize: 14, textAlign: "center", lineHeight: 1.7, maxWidth: 680, marginLeft: "auto", marginRight: "auto" }}>
+          No competimos con Vivino — Vivino habla de mil vinos. <strong style={{ color: theme.text }}>SommelierLab habla del tuyo.</strong> Y lo sigue haciendo aunque ya no lo tengas en la mano.
+        </p>
       </div>
     </section>
   );
@@ -421,6 +493,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <Solution />
+      <Retention />
       <Demo />
       <Control />
       <HowItWorks />

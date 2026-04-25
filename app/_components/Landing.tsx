@@ -34,7 +34,7 @@ function FoundingBanner({ t }: Props) {
         <span style={{ fontSize: 13, color: theme.text, fontWeight: 500 }}>
           {t.banner.text}
         </span>
-        <a href="#contacto" style={{ fontSize: 12, color: theme.text, fontWeight: 700, textDecoration: "underline" }}>
+        <a href="#contact" style={{ fontSize: 12, color: theme.text, fontWeight: 700, textDecoration: "underline" }}>
           {t.banner.cta}
         </a>
       </div>
@@ -48,10 +48,10 @@ function Nav({ t, lang }: Props) {
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
         <a href={`/${lang}`} style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-0.03em", color: theme.text, textDecoration: "none" }}>SOMMELIERLAB</a>
         <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-          <a href="#solución" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.solution}</a>
+          <a href="#solution" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.solution}</a>
           <a href="#demo" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.demo}</a>
-          <a href="#planes" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.plans}</a>
-          <a href="#contacto" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.contact}</a>
+          <a href="#plans" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.plans}</a>
+          <a href="#contact" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.contact}</a>
           <LangSwitch current={lang} />
         </div>
       </div>
@@ -83,7 +83,7 @@ function Hero({ t, lang }: Props) {
           }}>
             {t.hero.ctaPrimary}
           </a>
-          <a href="#contacto" style={{
+          <a href="#contact" style={{
             display: "inline-flex", alignItems: "center", justifyContent: "center", minHeight: 52, padding: "0 28px", borderRadius: 16,
             background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, color: theme.text, textDecoration: "none",
             fontWeight: 700, backdropFilter: "blur(8px)",
@@ -123,7 +123,7 @@ function Problem({ t }: Props) {
 
 function Solution({ t }: Props) {
   return (
-    <section id="solución" style={{ padding: "80px 0" }}>
+    <section id="solution" style={{ padding: "80px 0" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>{t.solution.eyebrow}</p>
         <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 40px", maxWidth: 700 }}>
@@ -320,7 +320,7 @@ function TwoQRs({ t }: Props) {
 
 function Pricing({ t }: Props) {
   return (
-    <section id="planes" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
+    <section id="plans" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>{t.pricing.eyebrow}</p>
         <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 16px" }}>
@@ -352,7 +352,7 @@ function Pricing({ t }: Props) {
                     </li>
                   ))}
                 </ul>
-                <a href="#contacto" style={{
+                <a href="#contact" style={{
                   display: "block", textAlign: "center", padding: "14px 0", borderRadius: 14, fontSize: 14, fontWeight: 700,
                   textDecoration: "none",
                   background: highlight ? "linear-gradient(135deg, #6E1835, #B04667)" : "rgba(255,255,255,0.06)",
@@ -456,7 +456,7 @@ function MediaProduction({ t }: Props) {
           <p style={{ margin: "0 0 14px", fontSize: 14, color: theme.text, lineHeight: 1.6 }}>
             <strong style={{ color: theme.gold }}>{t.media.ctaText}</strong>
           </p>
-          <a href="#contacto" style={{
+          <a href="#contact" style={{
             display: "inline-flex", alignItems: "center", padding: "10px 22px", borderRadius: 12,
             background: "rgba(255,255,255,0.06)", border: `1px solid ${theme.border}`, color: theme.text, textDecoration: "none",
             fontSize: 13, fontWeight: 700,
@@ -471,7 +471,7 @@ function MediaProduction({ t }: Props) {
 
 function Contact({ t }: Props) {
   return (
-    <section id="contacto" style={{ padding: "0 0 100px" }}>
+    <section id="contact" style={{ padding: "0 0 100px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <div style={{
           borderRadius: 28, padding: "40px 32px",

@@ -8,7 +8,7 @@ export const ca: Dict = {
   },
   banner: {
     label: "Cellers Fundadors",
-    text: "Només 5 places · Setup audiovisual gratis + 50% el primer any a canvi de testimoni",
+    text: "Només 5 places · Producció audiovisual gratuïta + 50% el primer any a canvi de testimoni",
     cta: "Reservar plaça →",
   },
   nav: {
@@ -19,11 +19,11 @@ export const ca: Dict = {
   },
   hero: {
     eyebrow: "Identitat digital del vi",
-    title: "El teu vi l'expliques tu",
+    title: "El teu vi, explicat per tu",
     subtitle:
-      "Controla la narrativa. Activa una experiència digital prèmium des de cada ampolla. Recupera la intel·ligència que avui es perd entre el celler i el consumidor.",
-    ctaPrimary: "Veure demo en viu",
-    ctaSecondary: "Sol·licitar demo personalitzada",
+      "Controla la narrativa. Activa una experiència digital prèmium des de cada ampolla. Recupera la intel·ligència que avui es perd entre el celler i el consumidor final.",
+    ctaPrimary: "Veure demo en directe",
+    ctaSecondary: "Demanar una demo personalitzada",
   },
   problem: {
     eyebrow: "El problema",
@@ -57,7 +57,7 @@ export const ca: Dict = {
       },
       {
         num: "02",
-        title: "9 idiomes, una ampolla",
+        title: "9 idiomes, una sola ampolla",
         text: "El teu vi parla alemany a Berlín, japonès a Tòquio, català a Barcelona. Fitxa, àudio i sommelier en l'idioma del consumidor.",
       },
       {
@@ -72,7 +72,7 @@ export const ca: Dict = {
       },
       {
         num: "05",
-        title: "Vens des de l'ampolla",
+        title: "Vendes des de l'ampolla",
         text: "Compra directa, reserva d'enoturisme, contacte. Cada escaneig és una oportunitat de conversió. L'ampolla deixa de ser muda.",
       },
       {
@@ -82,7 +82,7 @@ export const ca: Dict = {
       },
       {
         num: "07",
-        title: "L'ampolla no mor en buidar-se",
+        title: "L'ampolla no mor quan s'acaba",
         text: "Cada QR escanejat deixa empremta al mòbil del consumidor: cava personal, notes de tast, passi a Wallet. Mesos després, quan escaneja una altra ampolla teva, el sistema el saluda. Retenció real.",
       },
     ],
@@ -95,7 +95,7 @@ export const ca: Dict = {
     layers: [
       {
         tag: "Cava local",
-        title: "L'ampolla s'acaba, el teu celler no",
+        title: "L'ampolla s'acaba, però el teu celler continua",
         text: "Cada vi escanejat queda guardat a la cava personal del consumidor. Sense registre, sense fricció. Una llista visual d'ampolles que ha descobert. Una col·lecció íntima que creix amb cada tast.",
         pitch: "«L'ampolla s'acaba, però el teu celler viu al mòbil del consumidor»",
       },
@@ -143,10 +143,10 @@ export const ca: Dict = {
     title: "Descobreix què veu el teu client en escanejar la teva ampolla",
     intro:
       "Narrativa pròpia, àudio, sommelier IA, maridatge amb fotos, perfil sensorial, valoracions. En 9 idiomes. Des de l'ampolla.",
-    sideTitle: "Escaneja amb el teu mòbil",
+    sideTitle: "Escaneja amb el mòbil",
     sideText:
       "O fes clic a «Veure demo» per experimentar la fitxa completa de Inurrieta Puro Vicio 2021: narrativa amb àudio, sommelier conversacional, maridatge, perfil sensorial, valoracions i celler.",
-    qrCaption: "Escaneja per veure la demo",
+    qrCaption: "Escaneja per provar la demo",
   },
   control: {
     eyebrow: "El control",
@@ -228,7 +228,7 @@ export const ca: Dict = {
           "Colors/skin personalitzables",
           "E-label legal il·limitat GRATIS",
         ],
-        ctaLabel: "Sol·licitar demo",
+        ctaLabel: "Demanar una demo",
       },
       {
         name: "Pro",
@@ -242,7 +242,7 @@ export const ca: Dict = {
           "Joc de tast sensorial",
           "Permanència a Wallet",
         ],
-        ctaLabel: "Sol·licitar demo",
+        ctaLabel: "Demanar una demo",
       },
       {
         name: "Celler",
@@ -255,7 +255,7 @@ export const ca: Dict = {
           "Prioritat en noves features",
           "Intel·ligència de mercat",
         ],
-        ctaLabel: "Sol·licitar demo",
+        ctaLabel: "Demanar una demo",
       },
     ],
     setupTitle: "Setup inicial",
@@ -354,7 +354,7 @@ export const ca: Dict = {
       phone: "Telèfon",
       message: "Explica'ns alguna cosa (opcional)",
       messagePlaceholder: "Quants vins teniu, què busqueu, quan voleu arrencar…",
-      submit: "Sol·licitar demo",
+      submit: "Demanar una demo",
       sending: "Enviant…",
       successTitle: "Missatge rebut",
       successText: "Contactem amb tu en menys de 24 h amb una demo personalitzada per al teu celler.",

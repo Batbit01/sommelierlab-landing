@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { isValidLang, getDict, type Lang } from "../../lib/i18n";
 import { notFound } from "next/navigation";
+import { SetHtmlLang } from "../_components/SetHtmlLang";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -30,5 +31,10 @@ export default async function LangLayout({
 }) {
   const { lang } = await params;
   if (!isValidLang(lang)) notFound();
-  return <>{children}</>;
+  return (
+    <>
+      <SetHtmlLang lang={lang} />
+      {children}
+    </>
+  );
 }

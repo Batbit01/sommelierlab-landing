@@ -13,9 +13,32 @@ const theme = {
   glow: "rgba(122,30,58,0.28)",
 };
 
+function FoundingBanner() {
+  return (
+    <div style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 60,
+      background: "linear-gradient(90deg, rgba(122,30,58,0.95) 0%, rgba(176,70,103,0.95) 100%)",
+      borderBottom: "1px solid rgba(255,255,255,0.1)",
+      backdropFilter: "blur(8px)",
+    }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "10px 24px", display: "flex", alignItems: "center", justifyContent: "center", gap: 12, flexWrap: "wrap", textAlign: "center" }}>
+        <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.text, padding: "3px 8px", borderRadius: 6, background: "rgba(255,255,255,0.15)" }}>
+          Bodegas Fundadoras
+        </span>
+        <span style={{ fontSize: 13, color: theme.text, fontWeight: 500 }}>
+          Solo 5 plazas · Setup audiovisual gratis + 50% primer año a cambio de testimonial
+        </span>
+        <a href="#contacto" style={{ fontSize: 12, color: theme.text, fontWeight: 700, textDecoration: "underline" }}>
+          Reservar plaza →
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function Nav() {
   return (
-    <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 50, backdropFilter: "blur(12px)", background: "rgba(7,7,11,0.8)", borderBottom: `1px solid ${theme.border}` }}>
+    <nav style={{ position: "fixed", top: 42, left: 0, right: 0, zIndex: 50, backdropFilter: "blur(12px)", background: "rgba(7,7,11,0.8)", borderBottom: `1px solid ${theme.border}` }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
         <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-0.03em" }}>SOMMELIERLAB</span>
         <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
@@ -30,7 +53,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section style={{ position: "relative", overflow: "hidden", padding: "140px 0 80px", textAlign: "center" }}>
+    <section style={{ position: "relative", overflow: "hidden", padding: "180px 0 80px", textAlign: "center" }}>
       <div style={{ position: "absolute", top: -160, right: -80, width: 400, height: 400, borderRadius: "50%", background: theme.glow, filter: "blur(100px)", pointerEvents: "none" }} />
       <div style={{ position: "absolute", bottom: 100, left: -120, width: 300, height: 300, borderRadius: "50%", background: "rgba(211,177,122,0.06)", filter: "blur(90px)", pointerEvents: "none" }} />
       <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px", position: "relative" }}>
@@ -109,7 +132,7 @@ function Solution() {
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>La solución</p>
         <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 40px", maxWidth: 700 }}>
-          6 razones para activar la identidad digital de tus vinos
+          7 razones para activar la identidad digital de tus vinos
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 20 }}>
           {values.map((v) => (
@@ -353,9 +376,25 @@ function TwoQRs() {
 
 function Pricing() {
   const plans = [
-    { name: "Starter", price: "300", setup: "400", vinos: "Hasta 3 vinos", langs: "3 idiomas", sommelier: false, features: ["Narrativa + audio por vino", "Dashboard completo", "Analítica + valoraciones", "CTA compra por país", "QRs contextuales", "Colores/skin personalizables", "E-label legal ilimitado GRATIS"], highlight: false },
-    { name: "Pro", price: "600", setup: "800", vinos: "Hasta 8 vinos", langs: "9 idiomas", sommelier: true, features: ["Todo lo de Starter", "Sommelier IA conversacional", "Audio en todos los idiomas", "Juego de cata sensorial"], highlight: true },
-    { name: "Bodega", price: "900", setup: "1.200", vinos: "Vinos ilimitados", langs: "9 idiomas", sommelier: true, features: ["Todo lo de Pro", "Vinos ilimitados", "Prioridad en nuevas features", "Inteligencia de mercado"], highlight: false },
+    { name: "Starter", price: "300", vinos: "Hasta 3 vinos", langs: "3 idiomas", sommelier: false, features: ["Narrativa + audio por vino", "Dashboard completo", "Analítica + valoraciones", "Cava personal del consumidor", "CTA compra por país", "QRs contextuales", "Colores/skin personalizables", "E-label legal ilimitado GRATIS"], highlight: false },
+    { name: "Pro", price: "600", vinos: "Hasta 8 vinos", langs: "9 idiomas", sommelier: true, features: ["Todo lo de Starter", "Sommelier IA conversacional", "Audio en todos los idiomas", "Juego de cata sensorial", "Permanencia en Wallet"], highlight: true },
+    { name: "Bodega", price: "900", vinos: "Vinos ilimitados", langs: "9 idiomas", sommelier: true, features: ["Todo lo de Pro", "Vinos ilimitados", "Prioridad en nuevas features", "Inteligencia de mercado"], highlight: false },
+  ];
+  const setups = [
+    {
+      name: "Setup Básico",
+      price: "400",
+      desc: "Configuración técnica completa",
+      features: ["Onboarding y briefing inicial", "Carga de tus vinos al sistema", "Generación de QRs físicos", "Configuración de skin/colores", "Formación de uso del dashboard"],
+      highlight: false,
+    },
+    {
+      name: "Setup Audiovisual",
+      price: "1.500",
+      desc: "Setup Básico + producción media incluida",
+      features: ["Todo lo del Setup Básico", "Vídeo reel de la bodega · 60s", "20 fotografías profesionales", "Edición y publicación en tu ficha", "Material reutilizable para tus redes"],
+      highlight: true,
+    },
   ];
   return (
     <section id="planes" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
@@ -377,11 +416,10 @@ function Pricing() {
             }}>
               <h3 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 4px" }}>{p.name}</h3>
               <p style={{ color: theme.textSoft, fontSize: 13, margin: "0 0 16px" }}>{p.vinos} &middot; {p.langs}</p>
-              <p style={{ fontSize: 28, fontWeight: 800, margin: "0 0 0px" }}>
+              <p style={{ fontSize: 28, fontWeight: 800, margin: "0 0 16px" }}>
                 <span style={{ color: theme.gold }}>{p.price}€</span>
                 <span style={{ fontSize: 14, color: theme.textSoft, fontWeight: 500 }}>/año</span>
               </p>
-              <p style={{ fontSize: 12, color: theme.textSoft, margin: "0 0 16px" }}>Setup: {p.setup}€ (una vez)</p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px" }}>
                 {p.features.map((f) => (
                   <li key={f} style={{ padding: "5px 0", fontSize: 13, color: theme.textSoft, display: "flex", alignItems: "center", gap: 8 }}>
@@ -401,8 +439,43 @@ function Pricing() {
             </div>
           ))}
         </div>
+        {/* Bloque Setup (común para todos los planes) */}
+        <div style={{ marginTop: 56 }}>
+          <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>Setup inicial</p>
+          <h3 style={{ fontSize: "clamp(1.4rem, 3vw, 1.8rem)", lineHeight: 1.2, letterSpacing: "-0.02em", margin: "0 0 12px" }}>
+            Pago único al arrancar (cualquier plan)
+          </h3>
+          <p style={{ color: theme.textSoft, fontSize: 14, lineHeight: 1.7, margin: "0 0 28px", maxWidth: 640 }}>
+            Configuramos todo el sistema con tus vinos. Elige si necesitas también producción audiovisual.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+            {setups.map((s) => (
+              <div key={s.name} style={{
+                borderRadius: 24, padding: "28px 24px", backdropFilter: "blur(12px)",
+                background: s.highlight ? "linear-gradient(135deg, rgba(211,177,122,0.12), rgba(122,30,58,0.08))" : "rgba(255,255,255,0.03)",
+                border: `1px solid ${s.highlight ? "rgba(211,177,122,0.3)" : theme.border}`,
+              }}>
+                <h4 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 4px" }}>{s.name}</h4>
+                <p style={{ color: theme.textSoft, fontSize: 13, margin: "0 0 14px" }}>{s.desc}</p>
+                <p style={{ fontSize: 26, fontWeight: 800, margin: "0 0 16px" }}>
+                  <span style={{ color: theme.gold }}>{s.price}€</span>
+                  <span style={{ fontSize: 13, color: theme.textSoft, fontWeight: 500 }}> · una vez</span>
+                </p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {s.features.map((f) => (
+                    <li key={f} style={{ padding: "5px 0", fontSize: 13, color: theme.textSoft, display: "flex", alignItems: "flex-start", gap: 8 }}>
+                      <span style={{ color: theme.gold, marginTop: 1 }}>✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Comparativa con competencia */}
-        <div style={{ marginTop: 48, background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 24, padding: "28px 24px", overflow: "auto" }}>
+        <div style={{ marginTop: 56, background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 24, padding: "28px 24px", overflow: "auto" }}>
           <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 16px", textAlign: "center" }}>¿Cuánto pagas hoy por un QR que solo muestra ingredientes?</h3>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
             <thead>
@@ -434,6 +507,77 @@ function Pricing() {
               ))}
             </tbody>
           </table>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MediaProduction() {
+  const items = [
+    {
+      title: "Entrevista al enólogo",
+      duration: "45-60s",
+      text: "El alma de la bodega contada por quien decide. Un retrato directo, sin guión, en el lugar donde nace cada añada.",
+    },
+    {
+      title: "Vídeo de proceso",
+      duration: "60-90s",
+      text: "Vendimia a mano, fermentación, crianza, embotellado. Un proceso concreto, contado bien. Lo que diferencia tu bodega de las demás.",
+    },
+    {
+      title: "Cata con sommelier reconocido",
+      duration: "60-90s",
+      text: "Un nombre del mundo del vino valorando tu vino. Credibilidad inmediata, contenido aspiracional, bien producido.",
+    },
+    {
+      title: "Reportaje en bodega",
+      duration: "2-3 min",
+      text: "Un mini-documental que recorre el viñedo, la sala de barricas y la familia. Material premium reutilizable en redes y web.",
+    },
+    {
+      title: "Reel de vendimia anual",
+      duration: "30-45s",
+      text: "Cada año, un reel de la vendimia que se asocia a la añada nueva. Un activo nuevo cada año sin esfuerzo.",
+    },
+    {
+      title: "Sesión fotográfica adicional",
+      duration: "—",
+      text: "Más allá de las 20 fotos del setup audiovisual. Producción específica para campañas, ferias o nuevos lanzamientos.",
+    },
+  ];
+  return (
+    <section style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
+        <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>Producción audiovisual a medida</p>
+        <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 16px", maxWidth: 800 }}>
+          Convierte tu bodega en contenido que viaja
+        </h2>
+        <p style={{ color: theme.textSoft, fontSize: 15, lineHeight: 1.8, margin: "0 0 40px", maxWidth: 700 }}>
+          La ficha digital es solo el principio. Producimos contenido audiovisual específico para tu bodega: piezas reutilizables en tu QR, redes, web y ferias. Cada proyecto se cotiza según alcance.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+          {items.map((it) => (
+            <div key={it.title} style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 20, padding: "24px 22px", backdropFilter: "blur(12px)" }}>
+              <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 8, marginBottom: 10 }}>
+                <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700, lineHeight: 1.2 }}>{it.title}</h3>
+                <span style={{ fontSize: 11, color: theme.gold, fontWeight: 600, whiteSpace: "nowrap" }}>{it.duration}</span>
+              </div>
+              <p style={{ margin: 0, fontSize: 13, lineHeight: 1.7, color: theme.textSoft }}>{it.text}</p>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: 40, padding: "24px", borderRadius: 20, background: "linear-gradient(135deg, rgba(211,177,122,0.1), rgba(122,30,58,0.06))", border: `1px solid rgba(211,177,122,0.25)`, textAlign: "center" }}>
+          <p style={{ margin: "0 0 14px", fontSize: 14, color: theme.text, lineHeight: 1.6 }}>
+            <strong style={{ color: theme.gold }}>Cada proyecto se cotiza según alcance.</strong> Cuéntanos qué necesitas y te enviamos propuesta.
+          </p>
+          <a href="#contacto" style={{
+            display: "inline-flex", alignItems: "center", padding: "10px 22px", borderRadius: 12,
+            background: "rgba(255,255,255,0.06)", border: `1px solid ${theme.border}`, color: theme.text, textDecoration: "none",
+            fontSize: 13, fontWeight: 700,
+          }}>
+            Consultar producción audiovisual →
+          </a>
         </div>
       </div>
     </section>
@@ -493,6 +637,7 @@ function Footer() {
 export default function Home() {
   return (
     <main style={{ position: "relative", overflow: "hidden", background: `radial-gradient(ellipse at top, rgba(122,30,58,0.14), transparent 50%), linear-gradient(180deg, #07070B 0%, #0A0B10 100%)` }}>
+      <FoundingBanner />
       <Nav />
       <Hero />
       <Problem />
@@ -503,6 +648,7 @@ export default function Home() {
       <HowItWorks />
       <TwoQRs />
       <Pricing />
+      <MediaProduction />
       <Contact />
       <Footer />
     </main>

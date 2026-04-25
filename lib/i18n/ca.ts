@@ -97,7 +97,7 @@ export const ca: Dict = {
         tag: "Cava local",
         title: "L'ampolla s'acaba, el teu celler no",
         text: "Cada vi escanejat queda guardat a la cava personal del consumidor. Sense registre, sense fricció. Una llista visual d'ampolles que ha descobert. Una col·lecció íntima que creix amb cada tast.",
-        pitch: "\"L'ampolla s'acaba, però el teu celler viu al mòbil del consumidor\"",
+        pitch: "«L'ampolla s'acaba, però el teu celler viu al mòbil del consumidor»",
       },
       {
         tag: "Email opt-in",
@@ -109,25 +109,25 @@ export const ca: Dict = {
         tag: "Notes privades",
         title: "La teva llibreta de tast",
         text: "Valoració, ocasió, maridatge, impressions. Notes privades per ampolla, només per al consumidor. Torna mesos després i recorda què va pensar del teu vi la nit del seu aniversari.",
-        pitch: "\"La teva llibreta de tast — un diari personal per a cada vi teu\"",
+        pitch: "«La teva llibreta de tast — un diari personal per a cada vi teu»",
       },
       {
         tag: "Google Wallet",
         title: "Un passi natiu al mòbil",
         text: "Un toc i el teu vi queda al Google Wallet del consumidor. Amb foto, anyada i QR de tornada. Sobreviu a esborrar galetes, canviar de navegador, canviar de mòbil. Anys de permanència nativa.",
-        pitch: "\"Un passi natiu al Wallet. Anys de permanència.\"",
+        pitch: "«Un passi natiu al Wallet. Anys de permanència.»",
       },
       {
         tag: "Benvingut de nou",
         title: "El mòbil recorda el que ell va oblidar",
-        text: "Quan reescaneja una ampolla teva, el sistema el saluda: \"Benvingut de nou · el teu 3r tast · fa 2 mesos\". Tanca el cicle. Reforça la relació amb la teva marca sense que tu moguis un dit.",
-        pitch: "\"El mòbil del consumidor recorda l'ampolla que ell ja ha oblidat\"",
+        text: "Si reescaneja una ampolla teva, el sistema el saluda: «Benvingut de nou · el teu 3r tast · fa 2 mesos». Tanca el cicle. Reforça la relació amb la teva marca sense que tu moguis un dit.",
+        pitch: "«El mòbil del consumidor recorda l'ampolla que ell ja ha oblidat»",
       },
       {
         tag: "Taste graph",
         title: "El sommelier et reconeix",
         text: "El sommelier IA acumula memòria del tastador entre sessions. Recorda què li va agradar, què el va avorrir, què va descobrir. La pròxima vegada que obri un altre vi teu, la conversa arrenca des del seu historial.",
-        pitch: "\"El teu sommelier et reconeix a cada ampolla\"",
+        pitch: "«El teu sommelier et reconeix a cada ampolla»",
       },
     ],
     summary1: "Tres maneres de recordar el teu vi:",
@@ -145,7 +145,7 @@ export const ca: Dict = {
       "Narrativa pròpia, àudio, sommelier IA, maridatge amb fotos, perfil sensorial, valoracions. En 9 idiomes. Des de l'ampolla.",
     sideTitle: "Escaneja amb el teu mòbil",
     sideText:
-      'O fes clic a "Veure demo" per experimentar la fitxa completa de Inurrieta Puro Vicio 2021: narrativa amb àudio, sommelier conversacional, maridatge, perfil sensorial, valoracions i celler.',
+      "O fes clic a «Veure demo» per experimentar la fitxa completa de Inurrieta Puro Vicio 2021: narrativa amb àudio, sommelier conversacional, maridatge, perfil sensorial, valoracions i celler.",
     qrCaption: "Escaneja per veure la demo",
   },
   control: {
@@ -195,7 +195,7 @@ export const ca: Dict = {
     premium: {
       badge: "PRÈMIUM",
       title: "QR Experiència (SommelierLab)",
-      text: 'Experiència digital completa. Visible a la contraetiqueta o adhesiu prèmium amb CTA "Descobreix aquest vi".',
+      text: "Experiència digital completa. Visible a la contraetiqueta o adhesiu prèmium amb CTA «Descobreix aquest vi».",
       features: [
         "Narrativa editorial pròpia + àudio",
         "Fins a 9 idiomes amb traducció curada",
@@ -259,7 +259,7 @@ export const ca: Dict = {
       },
     ],
     setupTitle: "Setup inicial",
-    setupSubtitle: "Pagament únic en arrencar (qualsevol pla)",
+    setupSubtitle: "Pagament únic a l'inici (qualsevol pla)",
     setupHeading:
       "Configurem tot el sistema amb els teus vins. Tria si necessites també producció audiovisual.",
     setups: [
@@ -357,10 +357,10 @@ export const ca: Dict = {
       submit: "Sol·licitar demo",
       sending: "Enviant…",
       successTitle: "Missatge rebut",
-      successText: "Et contactem en menys de 24 h amb una demo personalitzada per al teu celler.",
+      successText: "Contactem amb tu en menys de 24 h amb una demo personalitzada per al teu celler.",
       errorGeneric:
         "No s'ha pogut connectar. Torna-ho a provar més tard o escriu-nos a hola@sommelierlab.com",
-      privacyNote: "Les teves dades només s'usen per contactar-te. Sense spam, sense butlletí.",
+      privacyNote: "Les teves dades només s'usen per contactar amb tu. Sense correu brossa, sense butlletí.",
     },
   },
   footer: {

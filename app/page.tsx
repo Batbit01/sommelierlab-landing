@@ -1,3 +1,5 @@
+import { ContactForm } from "./_components/ContactForm";
+
 // URL directa para el iframe (sin pasar por resolver, evita problemas de 302 en iframe)
 const QR_DEMO_URL = "https://qr2.sommelierlab.com/?vino_id=V005&anyada=2021&lang=es";
 // URL corta vía resolver con token — lo que codifica el QR físico. Emula flujo real de botella.
@@ -589,23 +591,20 @@ function Contact() {
     <section id="contacto" style={{ padding: "0 0 100px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
         <div style={{
-          borderRadius: 28, padding: "40px 32px", textAlign: "center",
+          borderRadius: 28, padding: "40px 32px",
           background: "linear-gradient(135deg, rgba(122,30,58,0.92) 0%, rgba(54,16,34,0.94) 100%)",
           border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 30px 60px rgba(0,0,0,0.3)",
         }}>
-          <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(246,241,235,0.6)", margin: "0 0 10px" }}>SommelierLab</p>
-          <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", lineHeight: 1.1, margin: "0 0 12px" }}>
-            Descubre cómo activar la identidad digital de tus vinos
-          </h2>
-          <p style={{ lineHeight: 1.8, color: "rgba(246,241,235,0.75)", fontSize: 15, margin: "0 0 24px" }}>
-            Te mostramos cómo funciona con una de tus botellas. Sin compromiso.
-          </p>
-          <a href="mailto:hola@sommelierlab.com" style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center", minHeight: 52, padding: "0 28px",
-            borderRadius: 16, background: theme.text, color: theme.wine, textDecoration: "none", fontWeight: 800, fontSize: 15,
-          }}>
-            Contactar
-          </a>
+          <div style={{ textAlign: "center", marginBottom: 28 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(246,241,235,0.6)", margin: "0 0 10px" }}>SommelierLab</p>
+            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", lineHeight: 1.1, margin: "0 0 12px" }}>
+              Descubre cómo activar la identidad digital de tus vinos
+            </h2>
+            <p style={{ lineHeight: 1.8, color: "rgba(246,241,235,0.75)", fontSize: 15, margin: "0 0 0" }}>
+              Te mostramos cómo funciona con una de tus botellas. Sin compromiso.
+            </p>
+          </div>
+          <ContactForm />
         </div>
       </div>
     </section>

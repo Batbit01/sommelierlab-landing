@@ -245,7 +245,7 @@ export const ca: Dict = {
         ctaLabel: "Sol·licitar demo",
       },
       {
-        name: "Bodega",
+        name: "Celler",
         price: "900",
         vinos: "Vins il·limitats",
         langs: "9 idiomes",

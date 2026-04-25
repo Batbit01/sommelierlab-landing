@@ -12,7 +12,38 @@ const theme = {
   wine: "#7A1E3A",
 };
 
-export function ContactForm() {
+export interface ContactFormStrings {
+  name: string;
+  bodega: string;
+  email: string;
+  phone: string;
+  message: string;
+  messagePlaceholder: string;
+  submit: string;
+  sending: string;
+  successTitle: string;
+  successText: string;
+  errorGeneric: string;
+  privacyNote: string;
+}
+
+const DEFAULT_STRINGS: ContactFormStrings = {
+  name: "Tu nombre *",
+  bodega: "Bodega *",
+  email: "Email *",
+  phone: "Teléfono",
+  message: "Cuéntanos algo (opcional)",
+  messagePlaceholder: "Cuántos vinos tenéis, qué buscáis, cuándo queréis arrancar…",
+  submit: "Solicitar demo",
+  sending: "Enviando…",
+  successTitle: "Mensaje recibido",
+  successText: "Te contactamos en menos de 24h con una demo personalizada para tu bodega.",
+  errorGeneric: "No se pudo conectar. Inténtalo más tarde o escríbenos a hola@sommelierlab.com",
+  privacyNote: "Tus datos solo se usan para contactarte. Sin spam, sin newsletter.",
+};
+
+export function ContactForm({ strings: stringsProp }: { strings?: ContactFormStrings } = {}) {
+  const strings = stringsProp ?? DEFAULT_STRINGS;
   const [form, setForm] = useState({
     nombre: "",
     bodega: "",
@@ -45,7 +76,7 @@ export function ContactForm() {
       setForm({ nombre: "", bodega: "", email: "", telefono: "", mensaje: "", website: "" });
     } catch {
       setStatus("error");
-      setErrorMsg("No se pudo conectar. Inténtalo más tarde o escríbenos a hola@sommelierlab.com");
+      setErrorMsg(strings.errorGeneric);
     }
   }
 
@@ -54,10 +85,10 @@ export function ContactForm() {
       <div style={{ textAlign: "center", padding: "20px 0" }}>
         <p style={{ fontSize: 32, margin: "0 0 12px" }}>✓</p>
         <p style={{ fontSize: 16, color: theme.text, margin: "0 0 8px", fontWeight: 600 }}>
-          Mensaje recibido
+          {strings.successTitle}
         </p>
         <p style={{ fontSize: 14, color: theme.textSoft, margin: 0, lineHeight: 1.6 }}>
-          Te contactamos en menos de 24h con una demo personalizada para tu bodega.
+          {strings.successText}
         </p>
       </div>
     );
@@ -90,7 +121,7 @@ export function ContactForm() {
     <form onSubmit={submit} style={{ textAlign: "left", maxWidth: 540, margin: "0 auto" }}>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
         <div>
-          <label style={labelStyle}>Tu nombre *</label>
+          <label style={labelStyle}>{strings.name}</label>
           <input
             required
             type="text"
@@ -101,7 +132,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label style={labelStyle}>Bodega *</label>
+          <label style={labelStyle}>{strings.bodega}</label>
           <input
             required
             type="text"
@@ -115,7 +146,7 @@ export function ContactForm() {
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
         <div>
-          <label style={labelStyle}>Email *</label>
+          <label style={labelStyle}>{strings.email}</label>
           <input
             required
             type="email"
@@ -126,7 +157,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label style={labelStyle}>Teléfono</label>
+          <label style={labelStyle}>{strings.phone}</label>
           <input
             type="tel"
             value={form.telefono}
@@ -138,13 +169,13 @@ export function ContactForm() {
       </div>
 
       <div style={{ marginBottom: 18 }}>
-        <label style={labelStyle}>Cuéntanos algo (opcional)</label>
+        <label style={labelStyle}>{strings.message}</label>
         <textarea
           rows={3}
           value={form.mensaje}
           onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
           disabled={status === "sending"}
-          placeholder="Cuántos vinos tenéis, qué buscáis, cuándo queréis arrancar…"
+          placeholder={strings.messagePlaceholder}
           style={{ ...inputStyle, resize: "vertical", fontFamily: "inherit", lineHeight: 1.5 }}
         />
       </div>
@@ -185,11 +216,11 @@ export function ContactForm() {
           fontFamily: "inherit",
         }}
       >
-        {status === "sending" ? "Enviando…" : "Solicitar demo"}
+        {status === "sending" ? strings.sending : strings.submit}
       </button>
 
       <p style={{ fontSize: 11, color: "rgba(246,241,235,0.4)", margin: "12px 0 0", textAlign: "center" }}>
-        Tus datos solo se usan para contactarte. Sin spam, sin newsletter.
+        {strings.privacyNote}
       </p>
     </form>
   );

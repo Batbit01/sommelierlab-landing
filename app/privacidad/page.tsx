@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function PrivacidadPage() {
   return (
-    <LegalLayout title="Política de Privacidad" updated="25 de abril de 2026">
+    <LegalLayout title="Política de Privacidad" updated="11 de mayo de 2026">
       <ResponsibleBlock />
 
       <Section title="1. Quién trata tus datos">
@@ -70,6 +70,12 @@ export default function PrivacidadPage() {
             preferido.
           </LI>
           <LI>
+            <strong>Foto de etiqueta de vino</strong>: si voluntariamente añades una botella a tu cava mediante captura de etiqueta, la imagen se procesa con un modelo de visión artificial para identificar el vino. La foto en sí se conserva solo si la identificación tuvo éxito y queda asociada a tu cava personal. Puedes borrarla en cualquier momento.
+          </LI>
+          <LI>
+            <strong>Audio de voz</strong>: si interactúas por voz con el sommelier conversacional (Genio), tu audio se transcribe a texto mediante un proveedor de inteligencia artificial. No se almacena el audio bruto en nuestros servidores; sí se conserva la transcripción de texto como parte del historial de tu conversación.
+          </LI>
+          <LI>
             <strong>Geolocalización aproximada</strong>: país, región y ciudad
             derivados de la IP, sin precisión de calle ni coordenadas GPS.
           </LI>
@@ -77,6 +83,9 @@ export default function PrivacidadPage() {
             <strong>Eventos de uso</strong>: escaneo de QR, apertura de ficha,
             reproducción de audio, consulta al sommelier IA, valoraciones. Se
             registran de forma agregada para análisis del servicio.
+          </LI>
+          <LI>
+            <strong>Perfil de gusto</strong>: el sommelier conversacional puede extraer y guardar de forma resumida tus preferencias (tipos de vino que te gustan, aromas que reconoces, vinos memorables que has mencionado) para personalizar futuras conversaciones. Este perfil es un texto destilado por IA a partir de tus conversaciones y nunca contiene datos identificativos.
           </LI>
         </UL>
       </Section>
@@ -146,6 +155,12 @@ export default function PrivacidadPage() {
           <LI>
             <strong>Eventos de uso en bruto</strong>: 180 días. Después se
             conservan solo como métricas agregadas sin identificador.
+          </LI>
+          <LI>
+            <strong>Transcripciones de conversaciones con el sommelier</strong>: 90 días tras la última interacción. Tras ese plazo se anonimizan o eliminan.
+          </LI>
+          <LI>
+            <strong>Fotos de etiqueta capturadas</strong>: mientras la botella esté en tu cava. Al borrarla de tu cava se elimina la foto asociada.
           </LI>
           <LI>
             <strong>Copias de seguridad cifradas</strong>: hasta 1 año como

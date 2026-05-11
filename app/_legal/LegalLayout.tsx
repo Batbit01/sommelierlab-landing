@@ -59,14 +59,15 @@ export function LegalLayout({
           <Link
             href="/"
             style={{
-              fontSize: 16,
-              fontWeight: 800,
-              letterSpacing: "-0.03em",
+              fontSize: 18,
+              letterSpacing: "-0.02em",
               color: theme.text,
               textDecoration: "none",
+              fontFamily: "'Fraunces', serif",
             }}
           >
-            SOMMELIERLAB
+            <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
+            <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
           </Link>
           <Link
             href="/"

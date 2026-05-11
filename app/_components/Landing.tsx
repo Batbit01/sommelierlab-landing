@@ -46,7 +46,10 @@ function Nav({ t, lang }: Props) {
   return (
     <nav style={{ position: "fixed", top: 42, left: 0, right: 0, zIndex: 50, backdropFilter: "blur(12px)", background: "rgba(7,7,11,0.8)", borderBottom: `1px solid ${theme.border}` }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
-        <a href={`/${lang}`} style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-0.03em", color: theme.text, textDecoration: "none" }}>SOMMELIERLAB</a>
+        <a href={`/${lang}`} style={{ fontSize: 18, letterSpacing: "-0.02em", color: theme.text, textDecoration: "none", fontFamily: "'Fraunces', serif" }}>
+          <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
+          <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+        </a>
         <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
           <a href="#solution" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.solution}</a>
           <a href="#demo" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.demo}</a>
@@ -499,7 +502,10 @@ function Footer({ t }: Props) {
     <footer style={{ borderTop: `1px solid ${theme.border}`, padding: "32px 0" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
         <div>
-          <span style={{ fontSize: 14, fontWeight: 800 }}>SOMMELIERLAB</span>
+          <span style={{ fontSize: 14, fontFamily: "'Fraunces', serif", letterSpacing: "-0.02em" }}>
+            <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
+            <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+          </span>
           <p style={{ fontSize: 11, color: theme.textSoft, margin: "4px 0 0" }}>{t.footer.tagline}</p>
         </div>
         <div style={{ display: "flex", gap: 20 }}>

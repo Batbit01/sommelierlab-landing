@@ -59,6 +59,9 @@ export function LegalLayout({
           <Link
             href="/"
             style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
               fontSize: 18,
               letterSpacing: "-0.02em",
               color: theme.text,
@@ -66,8 +69,12 @@ export function LegalLayout({
               fontFamily: "'Fraunces', serif",
             }}
           >
-            <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
-            <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-symbol.svg" alt="" width={32} height={32} style={{ display: "block" }} />
+            <span>
+              <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
+              <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+            </span>
           </Link>
           <Link
             href="/"

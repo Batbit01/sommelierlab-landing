@@ -486,7 +486,9 @@ function Contact({ t }: Props) {
           border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 30px 60px rgba(0,0,0,0.3)",
         }}>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(246,241,235,0.6)", margin: "0 0 10px" }}>{t.contact.eyebrow}</p>
+            {/* Logo dorado en lugar del eyebrow textual SOMMELIERLAB */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-symbol.svg" alt="" width={40} height={40} style={{ display: "inline-block", marginBottom: 10 }} />
             <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.2rem)", lineHeight: 1.1, margin: "0 0 12px" }}>
               {t.contact.title}
             </h2>
@@ -506,10 +508,14 @@ function Footer({ t }: Props) {
     <footer style={{ borderTop: `1px solid ${theme.border}`, padding: "32px 0" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
         <div>
-          <span style={{ fontSize: 14, fontFamily: "'Fraunces', serif", letterSpacing: "-0.02em" }}>
-            <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
-            <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
-          </span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-symbol.svg" alt="" width={28} height={28} style={{ display: "block" }} />
+            <span style={{ fontSize: 14, fontFamily: "'Fraunces', serif", letterSpacing: "-0.02em" }}>
+              <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
+              <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+            </span>
+          </div>
           <p style={{ fontSize: 11, color: theme.textSoft, margin: "4px 0 0" }}>{t.footer.tagline}</p>
         </div>
         <div style={{ display: "flex", gap: 20 }}>

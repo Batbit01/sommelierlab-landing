@@ -15,6 +15,13 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "SommelierLab — Tu vino lo explicas tú",
   description: "Convierte cada botella en una experiencia digital premium: narrativa, audio, sommelier IA, multiidioma y analítica. La identidad digital del vino, controlada por la bodega.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "SommelierLab — Tu vino lo explicas tú",
     description: "Experiencia digital premium desde cada botella. Narrativa, audio, sommelier IA, 9 idiomas, analítica.",

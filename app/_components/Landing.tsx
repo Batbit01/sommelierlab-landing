@@ -46,9 +46,13 @@ function Nav({ t, lang }: Props) {
   return (
     <nav style={{ position: "fixed", top: 42, left: 0, right: 0, zIndex: 50, backdropFilter: "blur(12px)", background: "rgba(7,7,11,0.8)", borderBottom: `1px solid ${theme.border}` }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
-        <a href={`/${lang}`} style={{ fontSize: 18, letterSpacing: "-0.02em", color: theme.text, textDecoration: "none", fontFamily: "'Fraunces', serif" }}>
-          <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
-          <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+        <a href={`/${lang}`} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 18, letterSpacing: "-0.02em", color: theme.text, textDecoration: "none", fontFamily: "'Fraunces', serif" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-symbol.svg" alt="" width={32} height={32} style={{ display: "block" }} />
+          <span>
+            <span style={{ fontWeight: 800, fontVariationSettings: "'opsz' 144" }}>Sommelier</span>
+            <span style={{ fontWeight: 300, fontStyle: "italic", fontVariationSettings: "'opsz' 144" }}>Lab</span>
+          </span>
         </a>
         <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
           <a href="#solution" style={{ fontSize: 13, color: theme.textSoft, textDecoration: "none", fontWeight: 500 }}>{t.nav.solution}</a>

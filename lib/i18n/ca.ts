@@ -368,5 +368,6 @@ export const ca: Dict = {
     privacy: "Privadesa",
     cookies: "Galetes",
     terms: "Termes",
+    subprocessors: "Subprocessadors",
   },
 };

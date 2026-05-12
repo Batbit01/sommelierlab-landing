@@ -153,5 +153,6 @@ export interface Dict {
     privacy: string;
     cookies: string;
     terms: string;
+    subprocessors: string;
   };
 }

@@ -1,6 +1,10 @@
+import Script from "next/script";
 import type { Dict, Lang } from "../../lib/i18n";
 import { ContactForm } from "./ContactForm";
 import { LangSwitch } from "./LangSwitch";
+
+const EMBED_SCRIPT_URL = "https://sommelierlab-dashboard.vercel.app/embed.js";
+const DEMO_WINE_ID = "V057-2024";
 
 const QR_SHORT_URL = "https://qr.sommelierlab.com/DEMO";
 
@@ -325,7 +329,7 @@ function TwoQRs({ t }: Props) {
   );
 }
 
-function Dni({ t }: Props) {
+function Dni({ t, lang }: Props) {
   return (
     <section id="dni" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}`, background: "linear-gradient(180deg, rgba(211,177,122,0.05), transparent 70%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
@@ -365,6 +369,49 @@ function Dni({ t }: Props) {
         <p style={{ marginTop: 24, fontSize: 13, color: theme.textSoft, textAlign: "center", lineHeight: 1.7, maxWidth: 680, marginLeft: "auto", marginRight: "auto", fontStyle: "italic" }}>
           {t.dni.footnote}
         </p>
+
+        {/* Sub-bloque: widget embebido VIVO en la propia landing */}
+        <div style={{ marginTop: 56, padding: "40px 32px", borderRadius: 24, background: "linear-gradient(135deg, rgba(211,177,122,0.06), rgba(122,30,58,0.04))", border: `1px solid rgba(211,177,122,0.2)` }}>
+          <h3 style={{ fontSize: "clamp(1.3rem, 3vw, 1.8rem)", lineHeight: 1.2, letterSpacing: "-0.02em", margin: "0 0 12px", color: theme.text, textAlign: "center" }}>
+            {t.dni.widgetTitle}
+          </h3>
+          <p style={{ color: theme.textSoft, fontSize: 14, lineHeight: 1.8, margin: "0 auto 36px", maxWidth: 640, textAlign: "center" }}>
+            {t.dni.widgetText}
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, alignItems: "start" }}>
+            {/* Variante 1: card con modal */}
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px", textAlign: "center" }}>
+                {t.dni.widgetVariantCard}
+              </p>
+              <div style={{ display: "flex", justifyContent: "center", minHeight: 200 }}>
+                <div data-sommelierlab-wine={DEMO_WINE_ID} data-lang={lang} />
+              </div>
+            </div>
+
+            {/* Variante 2: solo botella transparente */}
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px", textAlign: "center" }}>
+                {t.dni.widgetVariantBottle}
+              </p>
+              <div style={{ display: "flex", justifyContent: "center", minHeight: 200 }}>
+                <div data-sommelierlab-wine={DEMO_WINE_ID} data-lang={lang} data-variant="bottle" />
+              </div>
+            </div>
+          </div>
+
+          {/* Código que se pega */}
+          <div style={{ marginTop: 32 }}>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: theme.gold, margin: "0 0 10px" }}>
+              {t.dni.widgetCodeLabel}
+            </p>
+            <pre style={{ margin: 0, padding: "16px 18px", borderRadius: 12, background: "rgba(0,0,0,0.4)", border: `1px solid ${theme.border}`, overflowX: "auto", fontSize: 12, lineHeight: 1.6, color: theme.text, fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}>
+              <code>{`<script src="${EMBED_SCRIPT_URL}"></script>
+<sommelierlab-wine id="${DEMO_WINE_ID}"></sommelierlab-wine>`}</code>
+            </pre>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -592,6 +639,7 @@ export default function Landing({ t, lang }: Props) {
       <MediaProduction t={t} lang={lang} />
       <Contact t={t} lang={lang} />
       <Footer t={t} lang={lang} />
+      <Script src={EMBED_SCRIPT_URL} strategy="lazyOnload" />
     </main>
   );
 }

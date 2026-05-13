@@ -106,6 +106,11 @@ export interface Dict {
     examplesTitle: string;
     examples: { label: string; url: string }[];
     footnote: string;
+    widgetTitle: string;
+    widgetText: string;
+    widgetVariantCard: string;
+    widgetVariantBottle: string;
+    widgetCodeLabel: string;
   };
   pricing: {
     eyebrow: string;

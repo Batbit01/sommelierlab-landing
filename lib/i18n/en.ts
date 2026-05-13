@@ -374,6 +374,12 @@ export const en: Dict = {
     ],
     footnote:
       "GEO (Generative Engine Optimization) = the new SEO for the AI era. Included in every Bottle plan, no extra cost.",
+    widgetTitle: "See how it embeds in any website",
+    widgetText:
+      "These two widgets are running RIGHT HERE, inside this page, with two lines of JavaScript. You can paste it on your website, a restaurant wine list, an online shop — anywhere.",
+    widgetVariantCard: "Card with modal",
+    widgetVariantBottle: "Bottle only (transparent)",
+    widgetCodeLabel: "The code you paste:",
   },
   contact: {
     eyebrow: "SommelierLab",

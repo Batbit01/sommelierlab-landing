@@ -374,6 +374,12 @@ export const es: Dict = {
     ],
     footnote:
       "GEO (Generative Engine Optimization) = el nuevo SEO para la era de la IA. Incluido en todos los planes Bottle, sin coste extra.",
+    widgetTitle: "Mira cómo se embebe en cualquier web",
+    widgetText:
+      "Estos dos widgets están funcionando AQUÍ MISMO, dentro de esta página, con dos líneas de JavaScript. Lo puedes pegar en tu web, en una carta de restaurante, en una tienda online — donde quieras.",
+    widgetVariantCard: "Tarjeta con modal",
+    widgetVariantBottle: "Solo botella (transparente)",
+    widgetCodeLabel: "El código que se pega:",
   },
   contact: {
     eyebrow: "SommelierLab",

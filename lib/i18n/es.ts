@@ -343,6 +343,38 @@ export const es: Dict = {
       "Cada proyecto se cotiza según alcance. Cuéntanos qué necesitas y te enviamos propuesta.",
     ctaLabel: "Consultar producción audiovisual →",
   },
+  dni: {
+    eyebrow: "DNI del vino",
+    title1: "Cuando alguien pregunte a ChatGPT por tu vino,",
+    title2: "la fuente canónica eres tú.",
+    intro:
+      "Cada vez más consumidores preguntan a ChatGPT, Claude o Perplexity antes que a Google. SommelierLab convierte la ficha de tu vino en datos estructurados que las IAs entienden, citan y enlazan — autenticados por tu bodega, no por Vivino ni una reseña editorial.",
+    cards: [
+      {
+        title: "Tú decides qué se publica",
+        text: "Los datos están firmados por tu bodega. Si cambias la añada, cambian. Si retiras un vino, desaparece. Sin opiniones de desconocidos.",
+      },
+      {
+        title: "Las IAs ya pueden leerte",
+        text: "Hemos publicado estándares (Schema.org, llms.txt, sitemap, markdown) para que GPTBot, ClaudeBot, PerplexityBot y Google-Extended indexen tu vino como fuente oficial.",
+      },
+      {
+        title: "El DNI viaja contigo",
+        text: "Mismo vino, mismo DNI: en tu web, en tu QR, en tu carta de restaurante, en la app del consumidor. Una identidad portable que sobrevive a cualquier plataforma.",
+      },
+    ],
+    highlight:
+      "Tu vino tiene DNI digital firmado. Tú eres la fuente oficial — no Vivino ni una ficha editorial random.",
+    examplesTitle: "Infraestructura ya desplegada (puedes verla en vivo):",
+    examples: [
+      { label: "Catálogo indexable", url: "https://sommelierlab-dashboard.vercel.app/sitemap.xml" },
+      { label: "Política para IAs", url: "https://sommelierlab-dashboard.vercel.app/llms.txt" },
+      { label: "API JSON pública", url: "https://sommelierlab-dashboard.vercel.app/api/public/v1/wines/V057/2024" },
+      { label: "Datos para agentes IA", url: "https://sommelierlab-dashboard.vercel.app/api/public/v1/wines/V057/2024/md" },
+    ],
+    footnote:
+      "GEO (Generative Engine Optimization) = el nuevo SEO para la era de la IA. Incluido en todos los planes Bottle, sin coste extra.",
+  },
   contact: {
     eyebrow: "SommelierLab",
     title: "Descubre cómo activar la identidad digital de tus vinos",

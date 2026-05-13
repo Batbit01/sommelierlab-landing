@@ -96,6 +96,17 @@ export interface Dict {
       features: string[];
     };
   };
+  dni: {
+    eyebrow: string;
+    title1: string;
+    title2: string;
+    intro: string;
+    cards: { title: string; text: string }[];
+    highlight: string;
+    examplesTitle: string;
+    examples: { label: string; url: string }[];
+    footnote: string;
+  };
   pricing: {
     eyebrow: string;
     title: string;

@@ -343,6 +343,38 @@ export const en: Dict = {
       "Each project is quoted by scope. Tell us what you need and we'll send you a proposal.",
     ctaLabel: "Discuss audiovisual production →",
   },
+  dni: {
+    eyebrow: "Wine DNI",
+    title1: "When someone asks ChatGPT about your wine,",
+    title2: "you are the canonical source.",
+    intro:
+      "More and more consumers ask ChatGPT, Claude or Perplexity before Google. SommelierLab turns your wine sheet into structured data that AIs understand, cite and link — authenticated by your winery, not by Vivino or an editorial review.",
+    cards: [
+      {
+        title: "You decide what is published",
+        text: "The data is signed by your winery. Change the vintage, it updates. Discontinue a wine, it disappears. No opinions from strangers.",
+      },
+      {
+        title: "AIs can already read you",
+        text: "We've published the standards (Schema.org, llms.txt, sitemap, markdown) so GPTBot, ClaudeBot, PerplexityBot and Google-Extended index your wine as the official source.",
+      },
+      {
+        title: "The DNI travels with you",
+        text: "Same wine, same DNI: on your website, your QR, the restaurant wine list, the consumer app. A portable identity that survives any platform.",
+      },
+    ],
+    highlight:
+      "Your wine has a signed digital DNI. You are the official source — not Vivino, not some editorial review.",
+    examplesTitle: "Infrastructure already deployed (see it live):",
+    examples: [
+      { label: "Indexable catalog", url: "https://sommelierlab-dashboard.vercel.app/sitemap.xml" },
+      { label: "AI policy file", url: "https://sommelierlab-dashboard.vercel.app/llms.txt" },
+      { label: "Public JSON API", url: "https://sommelierlab-dashboard.vercel.app/api/public/v1/wines/V057/2024" },
+      { label: "Data for AI agents", url: "https://sommelierlab-dashboard.vercel.app/api/public/v1/wines/V057/2024/md" },
+    ],
+    footnote:
+      "GEO (Generative Engine Optimization) = the new SEO for the AI era. Included in every Bottle plan, no extra cost.",
+  },
   contact: {
     eyebrow: "SommelierLab",
     title: "Discover how to activate the digital identity of your wines",

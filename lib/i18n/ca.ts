@@ -343,6 +343,38 @@ export const ca: Dict = {
       "Cada projecte es pressuposta segons abast. Explica'ns què necessites i t'enviem proposta.",
     ctaLabel: "Consultar producció audiovisual →",
   },
+  dni: {
+    eyebrow: "DNI del vi",
+    title1: "Quan algú pregunti al ChatGPT pel teu vi,",
+    title2: "la font canònica ets tu.",
+    intro:
+      "Cada cop més consumidors pregunten al ChatGPT, Claude o Perplexity abans que al Google. SommelierLab converteix la fitxa del teu vi en dades estructurades que les IAs entenen, citen i enllacen — autenticades pel teu celler, no per Vivino ni una ressenya editorial.",
+    cards: [
+      {
+        title: "Tu decideixes què es publica",
+        text: "Les dades estan signades pel teu celler. Si canvies l'anyada, canvien. Si retires un vi, desapareix. Sense opinions de desconeguts.",
+      },
+      {
+        title: "Les IAs ja et poden llegir",
+        text: "Hem publicat estàndards (Schema.org, llms.txt, sitemap, markdown) perquè GPTBot, ClaudeBot, PerplexityBot i Google-Extended indexin el teu vi com a font oficial.",
+      },
+      {
+        title: "El DNI viatja amb tu",
+        text: "Mateix vi, mateix DNI: a la teva web, al teu QR, a la carta del restaurant, a l'app del consumidor. Una identitat portable que sobreviu a qualsevol plataforma.",
+      },
+    ],
+    highlight:
+      "El teu vi té DNI digital signat. Tu ets la font oficial — no Vivino ni una fitxa editorial qualsevol.",
+    examplesTitle: "Infraestructura ja desplegada (la pots veure en viu):",
+    examples: [
+      { label: "Catàleg indexable", url: "https://sommelierlab-dashboard.vercel.app/sitemap.xml" },
+      { label: "Política per a IAs", url: "https://sommelierlab-dashboard.vercel.app/llms.txt" },
+      { label: "API JSON pública", url: "https://sommelierlab-dashboard.vercel.app/api/public/v1/wines/V057/2024" },
+      { label: "Dades per a agents IA", url: "https://sommelierlab-dashboard.vercel.app/api/public/v1/wines/V057/2024/md" },
+    ],
+    footnote:
+      "GEO (Generative Engine Optimization) = el nou SEO per a l'era de la IA. Inclòs en tots els plans Bottle, sense cost extra.",
+  },
   contact: {
     eyebrow: "SommelierLab",
     title: "Descobreix com activar la identitat digital dels teus vins",

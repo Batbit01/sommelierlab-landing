@@ -325,6 +325,51 @@ function TwoQRs({ t }: Props) {
   );
 }
 
+function Dni({ t }: Props) {
+  return (
+    <section id="dni" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}`, background: "linear-gradient(180deg, rgba(211,177,122,0.05), transparent 70%)" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
+        <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>{t.dni.eyebrow}</p>
+        <h2 style={{ fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", lineHeight: 1.1, letterSpacing: "-0.03em", margin: "0 0 16px", maxWidth: 820 }}>
+          {t.dni.title1}{" "}
+          <span style={{ color: theme.gold }}>{t.dni.title2}</span>
+        </h2>
+        <p style={{ color: theme.textSoft, fontSize: "clamp(0.95rem, 1.8vw, 1.08rem)", lineHeight: 1.8, maxWidth: 760, margin: "0 0 40px" }}>
+          {t.dni.intro}
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 40 }}>
+          {t.dni.cards.map((c) => (
+            <div key={c.title} style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 24, padding: "28px 24px", backdropFilter: "blur(12px)" }}>
+              <h3 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px", color: theme.text }}>{c.title}</h3>
+              <p style={{ margin: 0, lineHeight: 1.8, color: theme.textSoft, fontSize: 14 }}>{c.text}</p>
+            </div>
+          ))}
+        </div>
+        <p style={{ padding: "24px 28px", borderRadius: 20, background: "rgba(122,30,58,0.08)", border: `1px solid rgba(122,30,58,0.25)`, fontSize: "clamp(1rem, 2.2vw, 1.2rem)", lineHeight: 1.7, color: theme.text, textAlign: "center", fontStyle: "italic", maxWidth: 860, margin: "0 auto 40px" }}>
+          <strong style={{ color: theme.gold, fontStyle: "normal" }}>“</strong>{t.dni.highlight}<strong style={{ color: theme.gold, fontStyle: "normal" }}>”</strong>
+        </p>
+        <div style={{ background: "rgba(255,255,255,0.02)", border: `1px solid ${theme.border}`, borderRadius: 20, padding: "24px 28px" }}>
+          <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: theme.gold, margin: "0 0 16px" }}>{t.dni.examplesTitle}</p>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 10 }}>
+            {t.dni.examples.map((e) => (
+              <li key={e.url}>
+                <a href={e.url} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", borderRadius: 12, background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, color: theme.textSoft, textDecoration: "none", fontSize: 13, transition: "color 0.2s" }}>
+                  <span style={{ color: theme.gold, fontWeight: 700 }}>›</span>
+                  <span style={{ fontWeight: 600, color: theme.text }}>{e.label}</span>
+                  <span style={{ fontSize: 11, color: theme.textSoft, marginLeft: "auto" }}>↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p style={{ marginTop: 24, fontSize: 13, color: theme.textSoft, textAlign: "center", lineHeight: 1.7, maxWidth: 680, marginLeft: "auto", marginRight: "auto", fontStyle: "italic" }}>
+          {t.dni.footnote}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function Pricing({ t }: Props) {
   return (
     <section id="plans" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
@@ -542,6 +587,7 @@ export default function Landing({ t, lang }: Props) {
       <Control t={t} lang={lang} />
       <HowItWorks t={t} lang={lang} />
       <TwoQRs t={t} lang={lang} />
+      <Dni t={t} lang={lang} />
       <Pricing t={t} lang={lang} />
       <MediaProduction t={t} lang={lang} />
       <Contact t={t} lang={lang} />

@@ -409,5 +409,6 @@ export const es: Dict = {
     cookies: "Cookies",
     terms: "Términos",
     subprocessors: "Subprocesadores",
+    aiPolicy: "Política IA",
   },
 };

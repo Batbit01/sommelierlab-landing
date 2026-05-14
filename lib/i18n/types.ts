@@ -172,5 +172,6 @@ export interface Dict {
     cookies: string;
     terms: string;
     subprocessors: string;
+    aiPolicy: string;
   };
 }

@@ -410,5 +410,6 @@ export const en: Dict = {
     cookies: "Cookies",
     terms: "Terms",
     subprocessors: "Subprocessors",
+    aiPolicy: "AI Policy",
   },
 };

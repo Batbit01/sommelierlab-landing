@@ -629,6 +629,7 @@ function Footer({ t }: Props) {
           <a href="/cookies" style={{ fontSize: 11, color: theme.textSoft, textDecoration: "none" }}>{t.footer.cookies}</a>
           <a href="/terminos" style={{ fontSize: 11, color: theme.textSoft, textDecoration: "none" }}>{t.footer.terms}</a>
           <a href="/subprocesadores" style={{ fontSize: 11, color: theme.textSoft, textDecoration: "none" }}>{t.footer.subprocessors}</a>
+          <a href="/politica-ia" style={{ fontSize: 11, color: theme.textSoft, textDecoration: "none" }}>{t.footer.aiPolicy}</a>
         </div>
       </div>
     </footer>

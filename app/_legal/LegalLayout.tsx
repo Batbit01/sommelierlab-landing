@@ -146,6 +146,8 @@ export function LegalLayout({
           <Link href="/privacidad" style={linkFoot}>Privacidad</Link>
           <Link href="/cookies" style={linkFoot}>Cookies</Link>
           <Link href="/terminos" style={linkFoot}>Términos</Link>
+          <Link href="/subprocesadores" style={linkFoot}>Subprocesadores</Link>
+          <Link href="/politica-ia" style={linkFoot}>Política IA</Link>
           <Link href="/" style={linkFoot}>Inicio</Link>
         </div>
       </article>

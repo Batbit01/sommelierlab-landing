@@ -411,6 +411,20 @@ function Dni({ t, lang }: Props) {
 <sommelierlab-wine id="${DEMO_WINE_ID}"></sommelierlab-wine>`}</code>
             </pre>
           </div>
+
+          {/* Puente a /partners para integradores técnicos */}
+          <div style={{ marginTop: 28, paddingTop: 24, borderTop: `1px solid ${theme.border}`, textAlign: "center" }}>
+            <p style={{ margin: "0 0 12px", color: theme.textSoft, fontSize: 14, lineHeight: 1.6 }}>
+              {t.dni.widgetPartnersBridge}
+            </p>
+            <a href="https://sommelierlab-dashboard.vercel.app/partners" target="_blank" rel="noopener noreferrer" style={{
+              display: "inline-flex", alignItems: "center", padding: "10px 22px", borderRadius: 12,
+              background: "rgba(211,177,122,0.1)", border: `1px solid rgba(211,177,122,0.3)`,
+              color: theme.gold, textDecoration: "none", fontSize: 13, fontWeight: 700,
+            }}>
+              {t.dni.widgetPartnersCta}
+            </a>
+          </div>
         </div>
       </div>
     </section>

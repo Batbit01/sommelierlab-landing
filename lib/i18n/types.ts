@@ -111,6 +111,8 @@ export interface Dict {
     widgetVariantCard: string;
     widgetVariantBottle: string;
     widgetCodeLabel: string;
+    widgetPartnersBridge: string;
+    widgetPartnersCta: string;
   };
   pricing: {
     eyebrow: string;

@@ -380,6 +380,9 @@ export const ca: Dict = {
     widgetVariantCard: "Targeta amb modal",
     widgetVariantBottle: "Només ampolla (transparent)",
     widgetCodeLabel: "El codi que s'enganxa:",
+    widgetPartnersBridge:
+      "Ets restaurant, botiga en línia o agència i vols incrustar aquests vins a la teva web?",
+    widgetPartnersCta: "Documentació tècnica + mode trigger →",
   },
   contact: {
     eyebrow: "SommelierLab",

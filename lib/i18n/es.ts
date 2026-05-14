@@ -380,6 +380,9 @@ export const es: Dict = {
     widgetVariantCard: "Tarjeta con modal",
     widgetVariantBottle: "Solo botella (transparente)",
     widgetCodeLabel: "El código que se pega:",
+    widgetPartnersBridge:
+      "¿Eres restaurante, tienda online o agencia y quieres embeber estos vinos en tu web?",
+    widgetPartnersCta: "Documentación técnica + modo trigger →",
   },
   contact: {
     eyebrow: "SommelierLab",

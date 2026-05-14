@@ -344,7 +344,7 @@ export const en: Dict = {
     ctaLabel: "Discuss audiovisual production →",
   },
   dni: {
-    eyebrow: "Wine DNI",
+    eyebrow: "Wine Digital Identity",
     title1: "When someone asks ChatGPT about your wine,",
     title2: "you are the canonical source.",
     intro:
@@ -359,12 +359,12 @@ export const en: Dict = {
         text: "We've published the standards (Schema.org, llms.txt, sitemap, markdown) so GPTBot, ClaudeBot, PerplexityBot and Google-Extended index your wine as the official source.",
       },
       {
-        title: "The DNI travels with you",
-        text: "Same wine, same DNI: on your website, your QR, the restaurant wine list, the consumer app. A portable identity that survives any platform.",
+        title: "A portable identity",
+        text: "Same wine, same identity: on your website, your QR, the restaurant wine list, the consumer app. A portable identity that survives any platform.",
       },
     ],
     highlight:
-      "Your wine has a signed digital DNI. You are the official source — not Vivino, not some editorial review.",
+      "Your wine has a Digital Identity signed by your winery. You are the official source — not Vivino, not some editorial review.",
     examplesTitle: "Infrastructure already deployed (see it live):",
     examples: [
       { label: "Indexable catalog", url: "https://sommelierlab-dashboard.vercel.app/sitemap.xml" },

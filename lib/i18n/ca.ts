@@ -344,7 +344,7 @@ export const ca: Dict = {
     ctaLabel: "Consultar producció audiovisual →",
   },
   dni: {
-    eyebrow: "DNI del vi",
+    eyebrow: "Identitat Digital del Vi",
     title1: "Quan algú pregunti al ChatGPT pel teu vi,",
     title2: "la font canònica ets tu.",
     intro:
@@ -359,12 +359,12 @@ export const ca: Dict = {
         text: "Hem publicat estàndards (Schema.org, llms.txt, sitemap, markdown) perquè GPTBot, ClaudeBot, PerplexityBot i Google-Extended indexin el teu vi com a font oficial.",
       },
       {
-        title: "El DNI viatja amb tu",
-        text: "Mateix vi, mateix DNI: a la teva web, al teu QR, a la carta del restaurant, a l'app del consumidor. Una identitat portable que sobreviu a qualsevol plataforma.",
+        title: "Una identitat portable",
+        text: "Mateix vi, mateixa identitat: a la teva web, al teu QR, a la carta del restaurant, a l'app del consumidor. Una identitat portable que sobreviu a qualsevol plataforma.",
       },
     ],
     highlight:
-      "El teu vi té DNI digital signat. Tu ets la font oficial — no Vivino ni una fitxa editorial qualsevol.",
+      "El teu vi té Identitat Digital signada pel teu celler. Tu ets la font oficial — no Vivino ni una fitxa editorial qualsevol.",
     examplesTitle: "Infraestructura ja desplegada (la pots veure en viu):",
     examples: [
       { label: "Catàleg indexable", url: "https://sommelierlab-dashboard.vercel.app/sitemap.xml" },

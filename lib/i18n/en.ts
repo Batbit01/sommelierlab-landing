@@ -384,6 +384,50 @@ export const en: Dict = {
       "Are you a restaurant, online shop or agency and want to embed these wines on your site?",
     widgetPartnersCta: "Technical docs + trigger mode →",
   },
+  idvFirmado: {
+    eyebrow: "Signed WDI · new May 2026",
+    title: "Take narrative control of your wine.",
+    intro:
+      "What you tell is what counts. SommelierLab cryptographically signs the authentic voice of your winery so it travels the world with an undeniable seal.",
+    tensionTitle: "The problem",
+    tensionText:
+      "Every day your wine appears on websites, blogs, distributors, digital menus and AI answers. Each copy is a potential deformation: an embellished tasting note, an omitted variety, a score changed with good intent. And your winery wasn't there to correct.",
+    responseTitle: "The answer · Signed WDI",
+    responseText:
+      "When you publish a wine with SommelierLab, its material data is cryptographically signed. Anyone — distributor, journalist, AI, consumer — can consult your signed WDI and know which is the winery's authentic version.",
+    responseQuote: "No permission needed. No trust required. Just mathematics.",
+    cards: [
+      {
+        title: "For the winery",
+        text: "Your voice, intact. Copies circulating worldwide can be contrasted in seconds against your signed WDI. The authentic one will always carry your seal. The deformed versions, won't.",
+      },
+      {
+        title: "For the consumer",
+        text: "Real information. What you read on a menu, app or blog can be verified against the WDI signed by the winery. No intermediaries reinterpreting.",
+      },
+      {
+        title: "For search engines & AIs",
+        text: "A trustworthy source to cite. Google, ChatGPT, Perplexity, Claude can reference the official WDI and reduce the risk of propagating errors. The original source is always one click away.",
+      },
+    ],
+    scopeTitle: "What is signed and what is not",
+    scopeFirmadoLabel: "Inside the signed WDI",
+    scopeFirmadoText:
+      "Material wine data: name, vintage, variety, DO, official tasting notes, elaboration, vinification, ageing, narrative, awards and certifications declared by the winery.",
+    scopeNoFirmadoLabel: "On top of the signed WDI",
+    scopeNoFirmadoText:
+      "The dynamic and subjective: consumer ratings, comments, multimedia, prices and purchase CTAs. The winery edits them freely without re-signing.",
+    scopeSommelierLabel: "And the AI Sommelier?",
+    scopeSommelierText:
+      "It doesn't sign what it says, but only knows the signed data of your wine: it doesn't browse, doesn't improvise. If the winery corrects its data, the Sommelier automatically corrects what it tells.",
+    proofTitle: "Live proof",
+    proofText:
+      "Every signed WDI is public and verifiable. No login, no private keys. Click below to see a signature in action or the complete registry of all active wineries.",
+    proofCtaSingle: "See a live WDI →",
+    proofCtaList: "Public registry of all signatures →",
+    techFooter:
+      "Ed25519 · JCS (RFC 8785) · W3C Verifiable Credential · open standard · no lock-in",
+  },
   contact: {
     eyebrow: "SommelierLab",
     title: "Discover how to activate the digital identity of your wines",

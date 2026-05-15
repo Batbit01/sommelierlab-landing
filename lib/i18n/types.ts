@@ -114,6 +114,29 @@ export interface Dict {
     widgetPartnersBridge: string;
     widgetPartnersCta: string;
   };
+  idvFirmado: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    tensionTitle: string;
+    tensionText: string;
+    responseTitle: string;
+    responseText: string;
+    responseQuote: string;
+    cards: { title: string; text: string }[];
+    scopeTitle: string;
+    scopeFirmadoLabel: string;
+    scopeFirmadoText: string;
+    scopeNoFirmadoLabel: string;
+    scopeNoFirmadoText: string;
+    scopeSommelierLabel: string;
+    scopeSommelierText: string;
+    proofTitle: string;
+    proofText: string;
+    proofCtaSingle: string;
+    proofCtaList: string;
+    techFooter: string;
+  };
   pricing: {
     eyebrow: string;
     title: string;

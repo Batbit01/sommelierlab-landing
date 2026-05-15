@@ -384,6 +384,50 @@ export const es: Dict = {
       "¿Eres restaurante, tienda online o agencia y quieres embeber estos vinos en tu web?",
     widgetPartnersCta: "Documentación técnica + modo trigger →",
   },
+  idvFirmado: {
+    eyebrow: "IDV firmado · novedad mayo 2026",
+    title: "Asegúrate del control narrativo de tu vino.",
+    intro:
+      "Lo que cuentas tú es lo que cuenta. SommelierLab firma criptográficamente la voz auténtica de tu bodega para que circule por el mundo con sello incontestable.",
+    tensionTitle: "El problema",
+    tensionText:
+      "Cada día tu vino aparece en webs, blogs, distribuidores, cartas digitales y respuestas de IAs. Cada copia es una posible deformación: una nota de cata adornada, una variedad omitida, una puntuación cambiada con buena intención. Y tu bodega no estaba ahí para corregir.",
+    responseTitle: "La respuesta · IDV firmado",
+    responseText:
+      "Cuando publicas un vino con SommelierLab, sus datos materiales se firman criptográficamente. Cualquier persona — distribuidor, periodista, IA, consumidor — puede consultar tu IDV firmado y saber cuál es la versión auténtica de la bodega.",
+    responseQuote: "Sin pedir permiso. Sin confiar en nosotros. Solo matemáticas.",
+    cards: [
+      {
+        title: "Para la bodega",
+        text: "Tu voz, intacta. Las copias que circulen por el mundo pueden contrastarse en segundos con tu IDV firmado. La auténtica siempre tendrá tu sello. Las versiones que la deforman, no.",
+      },
+      {
+        title: "Para el consumidor",
+        text: "Información de verdad. Lo que lee en una carta, app o blog se puede verificar contra el IDV firmado por la bodega. Sin intermediarios reinterpretando.",
+      },
+      {
+        title: "Para buscadores e IAs",
+        text: "Una fuente fideligna que citar. Google, ChatGPT, Perplexity, Claude pueden referenciar el IDV oficial y reducir el riesgo de propagar errores. La fuente original siempre está a un click.",
+      },
+    ],
+    scopeTitle: "Qué se firma y qué no",
+    scopeFirmadoLabel: "Dentro del IDV firmado",
+    scopeFirmadoText:
+      "Datos materiales del vino: nombre, añada, variedad, DO, notas de cata oficiales, elaboración, vinificación, crianza, narrativa, premios y certificaciones declarados por la bodega.",
+    scopeNoFirmadoLabel: "Por encima del IDV firmado",
+    scopeNoFirmadoText:
+      "Lo dinámico y subjetivo: ratings de consumidores, comentarios, multimedia, precios y CTAs de compra. La bodega los edita libremente sin re-firmar.",
+    scopeSommelierLabel: "¿Y el Sommelier IA?",
+    scopeSommelierText:
+      "No firma lo que dice, pero solo conoce los datos firmados de tu vino: no busca en internet, no improvisa. Si la bodega corrige sus datos, el Sommelier corrige automáticamente lo que cuenta.",
+    proofTitle: "Prueba en vivo",
+    proofText:
+      "Cada IDV firmado es público y verificable. Sin login, sin claves privadas. Pulsa abajo para ver una firma en acción o el registro completo de todas las bodegas activas.",
+    proofCtaSingle: "Ver un IDV en vivo →",
+    proofCtaList: "Registro público de todas las firmas →",
+    techFooter:
+      "Ed25519 · JCS (RFC 8785) · W3C Verifiable Credential · estándar abierto · sin lock-in",
+  },
   contact: {
     eyebrow: "SommelierLab",
     title: "Descubre cómo activar la identidad digital de tus vinos",

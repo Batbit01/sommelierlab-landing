@@ -431,6 +431,133 @@ function Dni({ t, lang }: Props) {
   );
 }
 
+function IdvFirmado({ t }: Props) {
+  const c = t.idvFirmado;
+  return (
+    <section
+      id="idv-firmado"
+      style={{
+        padding: "80px 0",
+        borderTop: `1px solid ${theme.border}`,
+        background: "linear-gradient(180deg, rgba(122,30,58,0.06), transparent 70%)",
+      }}
+    >
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
+        <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 12px" }}>
+          {c.eyebrow}
+        </p>
+        <h2 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", lineHeight: 1.05, letterSpacing: "-0.03em", margin: "0 0 20px", maxWidth: 840 }}>
+          {c.title}
+        </h2>
+        <p style={{ color: theme.textSoft, fontSize: "clamp(1rem, 1.9vw, 1.15rem)", lineHeight: 1.7, maxWidth: 800, margin: "0 0 48px" }}>
+          {c.intro}
+        </p>
+
+        {/* Tensión + Respuesta · dos bloques contrapuestos */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20, marginBottom: 48 }}>
+          <div style={{ background: "rgba(122,30,58,0.08)", border: `1px solid rgba(122,30,58,0.25)`, borderRadius: 20, padding: "24px 26px" }}>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(228,160,180,0.85)", margin: "0 0 10px" }}>
+              {c.tensionTitle}
+            </p>
+            <p style={{ margin: 0, color: theme.text, fontSize: 14.5, lineHeight: 1.75 }}>
+              {c.tensionText}
+            </p>
+          </div>
+          <div style={{ background: "rgba(211,177,122,0.08)", border: `1px solid rgba(211,177,122,0.3)`, borderRadius: 20, padding: "24px 26px" }}>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: theme.gold, margin: "0 0 10px" }}>
+              {c.responseTitle}
+            </p>
+            <p style={{ margin: "0 0 12px", color: theme.text, fontSize: 14.5, lineHeight: 1.75 }}>
+              {c.responseText}
+            </p>
+            <p style={{ margin: 0, color: theme.gold, fontSize: 13, fontStyle: "italic", lineHeight: 1.6 }}>
+              {c.responseQuote}
+            </p>
+          </div>
+        </div>
+
+        {/* 3 beneficiados */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 48 }}>
+          {c.cards.map((card) => (
+            <div key={card.title} style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${theme.border}`, borderRadius: 24, padding: "28px 24px", backdropFilter: "blur(12px)" }}>
+              <h3 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px", color: theme.text }}>{card.title}</h3>
+              <p style={{ margin: 0, lineHeight: 1.75, color: theme.textSoft, fontSize: 14 }}>{card.text}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Qué se firma y qué no · transparencia */}
+        <div style={{ background: "rgba(255,255,255,0.02)", border: `1px solid ${theme.border}`, borderRadius: 20, padding: "28px 30px", marginBottom: 40 }}>
+          <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: theme.gold, margin: "0 0 20px" }}>
+            {c.scopeTitle}
+          </p>
+          <div style={{ display: "grid", gap: 18 }}>
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: theme.text, margin: "0 0 6px" }}>
+                ✓ {c.scopeFirmadoLabel}
+              </p>
+              <p style={{ margin: 0, color: theme.textSoft, fontSize: 14, lineHeight: 1.7 }}>{c.scopeFirmadoText}</p>
+            </div>
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: theme.text, margin: "0 0 6px" }}>
+                ○ {c.scopeNoFirmadoLabel}
+              </p>
+              <p style={{ margin: 0, color: theme.textSoft, fontSize: 14, lineHeight: 1.7 }}>{c.scopeNoFirmadoText}</p>
+            </div>
+            <div>
+              <p style={{ fontSize: 13, fontWeight: 700, color: theme.text, margin: "0 0 6px" }}>
+                ◇ {c.scopeSommelierLabel}
+              </p>
+              <p style={{ margin: 0, color: theme.textSoft, fontSize: 14, lineHeight: 1.7 }}>{c.scopeSommelierText}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Prueba en vivo · CTAs */}
+        <div style={{ background: "linear-gradient(135deg, rgba(211,177,122,0.08), rgba(122,30,58,0.04))", border: `1px solid rgba(211,177,122,0.2)`, borderRadius: 24, padding: "32px 30px", textAlign: "center" }}>
+          <h3 style={{ fontSize: "clamp(1.2rem, 2.8vw, 1.6rem)", margin: "0 0 12px", color: theme.text }}>
+            {c.proofTitle}
+          </h3>
+          <p style={{ color: theme.textSoft, fontSize: 14, lineHeight: 1.7, margin: "0 auto 24px", maxWidth: 620 }}>
+            {c.proofText}
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>
+            <a
+              href="https://idv.sommelierlab.com/V005-2021"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", padding: "12px 24px", borderRadius: 12,
+                background: "rgba(211,177,122,0.15)", border: `1px solid rgba(211,177,122,0.4)`,
+                color: theme.gold, textDecoration: "none", fontSize: 14, fontWeight: 700,
+              }}
+            >
+              {c.proofCtaSingle}
+            </a>
+            <a
+              href="https://idv.sommelierlab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", padding: "12px 24px", borderRadius: 12,
+                background: "rgba(255,255,255,0.04)", border: `1px solid ${theme.border}`,
+                color: theme.text, textDecoration: "none", fontSize: 14, fontWeight: 700,
+              }}
+            >
+              {c.proofCtaList}
+            </a>
+          </div>
+        </div>
+
+        {/* Footer técnico */}
+        <p style={{ marginTop: 32, fontSize: 11, color: theme.textSoft, textAlign: "center", opacity: 0.7, letterSpacing: "0.02em", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}>
+          {c.techFooter}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function Pricing({ t }: Props) {
   return (
     <section id="plans" style={{ padding: "80px 0", borderTop: `1px solid ${theme.border}` }}>
@@ -650,6 +777,7 @@ export default function Landing({ t, lang }: Props) {
       <HowItWorks t={t} lang={lang} />
       <TwoQRs t={t} lang={lang} />
       <Dni t={t} lang={lang} />
+      <IdvFirmado t={t} lang={lang} />
       <Pricing t={t} lang={lang} />
       <MediaProduction t={t} lang={lang} />
       <Contact t={t} lang={lang} />

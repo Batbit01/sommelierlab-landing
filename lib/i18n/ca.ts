@@ -384,6 +384,50 @@ export const ca: Dict = {
       "Ets restaurant, botiga en línia o agència i vols incrustar aquests vins a la teva web?",
     widgetPartnersCta: "Documentació tècnica + mode trigger →",
   },
+  idvFirmado: {
+    eyebrow: "IDV signat · novetat maig 2026",
+    title: "Assegura el control narratiu del teu vi.",
+    intro:
+      "El que expliques tu és el que compta. SommelierLab signa criptogràficament la veu autèntica del teu celler perquè circuli pel món amb segell incontestable.",
+    tensionTitle: "El problema",
+    tensionText:
+      "Cada dia el teu vi apareix en webs, blogs, distribuïdors, cartes digitals i respostes d'IAs. Cada còpia és una possible deformació: una nota de tast adornada, una varietat omesa, una puntuació canviada amb bona intenció. I el teu celler no hi era per corregir.",
+    responseTitle: "La resposta · IDV signat",
+    responseText:
+      "Quan publiques un vi amb SommelierLab, les dades materials se signen criptogràficament. Qualsevol persona — distribuïdor, periodista, IA, consumidor — pot consultar el teu IDV signat i saber quina és la versió autèntica del celler.",
+    responseQuote: "Sense demanar permís. Sense confiar en nosaltres. Només matemàtiques.",
+    cards: [
+      {
+        title: "Per al celler",
+        text: "La teva veu, intacta. Les còpies que circulin pel món es poden contrastar en segons amb el teu IDV signat. L'autèntica sempre tindrà el teu segell. Les versions que la deformen, no.",
+      },
+      {
+        title: "Per al consumidor",
+        text: "Informació de veritat. El que llegeix en una carta, app o blog es pot verificar contra l'IDV signat pel celler. Sense intermediaris reinterpretant.",
+      },
+      {
+        title: "Per a cercadors i IAs",
+        text: "Una font fefaent per citar. Google, ChatGPT, Perplexity, Claude poden referenciar l'IDV oficial i reduir el risc de propagar errors. La font original sempre està a un clic.",
+      },
+    ],
+    scopeTitle: "Què se signa i què no",
+    scopeFirmadoLabel: "Dins de l'IDV signat",
+    scopeFirmadoText:
+      "Dades materials del vi: nom, anyada, varietat, DO, notes de tast oficials, elaboració, vinificació, criança, narrativa, premis i certificacions declarats pel celler.",
+    scopeNoFirmadoLabel: "Per sobre de l'IDV signat",
+    scopeNoFirmadoText:
+      "El dinàmic i subjectiu: valoracions de consumidors, comentaris, multimèdia, preus i CTA de compra. El celler les edita lliurement sense tornar a signar.",
+    scopeSommelierLabel: "I el Sommelier IA?",
+    scopeSommelierText:
+      "No signa el que diu, però només coneix les dades signades del teu vi: no busca a internet, no improvisa. Si el celler corregeix les dades, el Sommelier corregeix automàticament el que explica.",
+    proofTitle: "Prova en viu",
+    proofText:
+      "Cada IDV signat és públic i verificable. Sense login, sense claus privades. Prem a sota per veure una signatura en acció o el registre complet de tots els cellers actius.",
+    proofCtaSingle: "Veure un IDV en viu →",
+    proofCtaList: "Registre públic de totes les signatures →",
+    techFooter:
+      "Ed25519 · JCS (RFC 8785) · W3C Verifiable Credential · estàndard obert · sense lock-in",
+  },
   contact: {
     eyebrow: "SommelierLab",
     title: "Descobreix com activar la identitat digital dels teus vins",
